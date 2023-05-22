@@ -10,7 +10,7 @@
                 <form class="shadow p-5 rounded bg-white" wire:submit.prevent="store">
                     @csrf
 
-                    @if ($errors->any())
+                    {{-- @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
                             @foreach ($errors->all() as $error)
@@ -18,7 +18,7 @@
                             @endforeach
                         </ul>
                     </div>
-                @endif
+                @endif --}}
 
                     @if (session()->has('message'))
                         <div class="alert alert-success text-center">
@@ -38,8 +38,17 @@
 
                     <div class="mb-3">
                         <label for="price" class="form-label">Prezzo</label>
-                        <input type="number" wire:model="price" class="form-control @error('price') is-invalid @enderror" id="price"> @error('price'){{$message}} @enderror
-
+                        <input type="number" step="0.01" wire:model="price" class="form-control @error('price') is-invalid @enderror" id="price"> @error('price'){{$message}} @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label for="category" class="form-label">Categoria</label>
+                        <select class="form-select" wire:model.defer="category" id="category">
+                            <option value="" selected>Seleziona una categoria</option>
+                            @foreach ($categories as $category)
+                            <option value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
+                            </select>
+                    </div>
                         <button type="submit" class="btn btn-primary">Crea articolo</button>
 
                 </form>
