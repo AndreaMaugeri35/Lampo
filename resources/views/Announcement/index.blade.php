@@ -19,11 +19,11 @@
                   </div>
                 </div>
             @empty
-                <div class="col-12 my-5 d-flex flex-column align-items-center">
-                    <h2 class="text-center">Non ci sono annunci</h2>
+                <div class="col-12 my-5 d-flex flex-column align-items-center ">
+                    <h2 class="text-center text-primaryC display-3 fw-bold">Non ci sono annunci</h2>
                 </div>
             @endforelse
-                <div class="col-12 my-5 d-flex flex-column align-items-center">
+                <div class="col-12 my-5 d-flex flex-column align-items-center ">
                     
                     <a href="{{route('announcement.create')}}" class="btn btn-primary my-5">Pubblica un nuovo annuncio</a>
                 </div>

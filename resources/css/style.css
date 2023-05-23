@@ -78,3 +78,20 @@ body{
 .navbar-hidden {
     display: none;
   }
+
+#navbar{
+    transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 650px) {
+    .header{
+        display:none !important;
+    }
+    .nav{
+        background-color: var(--blacky)!important;
+    }
+    li{
+        padding-left: 40px;
+    }
+}
+
