@@ -10,10 +10,13 @@
     width: 200px;
 }
 
-.dropdaun, body{
-    background: rgb(2,0,36);
-background: linear-gradient(146deg, rgba(2,0,36,0) 0%, rgba(19,56,98,1) 35%, rgba(19,56,98,1) 100%);
+body{
+    background-image: url(/public/media/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
+
 .text-primaryC{
     color: var(--primary);
 }
@@ -49,4 +52,25 @@ background: linear-gradient(146deg, rgba(2,0,36,0) 0%, rgba(19,56,98,1) 35%, rgb
 
 .background-blackC{
     background-color: var(--blacky);
+}
+
+.active{
+    color: var(--primary) !important;
+    transform: scale(1.2);
+}
+
+.btn-link:hover{
+    color:rgb(77, 222, 255);
+    transform: scale(1.1);
+}
+
+.btn{
+    background-color: var(--primary);
+    border: var(--primary);
+}
+
+.btn:hover{
+    color: var(--secondary) !important;
+    transform: scale(1.1);
+    background-color: var(--primary);
 }

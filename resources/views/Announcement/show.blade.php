@@ -1,5 +1,5 @@
 <x-layout title="{{$announcement->title}}">
-    <div class="container my-5">
+    <div class="container my-2">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 mt-5">
                 <div class="card">
@@ -34,7 +34,7 @@
                       <h5 class="card-title">{{$announcement->title}}</h5>
                       <p class="card-title fw-bold">{{$announcement->category->name}}</p>
                       <p class="card-text">{{$announcement->body}}</p>
-                      <p class="card-text">{{$announcement->price}}</p>
+                      <p class="card-text">{{$announcement->price}} €</p>
                       <p class="card-text">Pubblicato il :{{$announcement->created_at->format('d/m/Y')}} - Da: {{$announcement->user->name ?? ''}}</p>
                       <a href="{{route('homepage')}}" class="btn btn-primary">Torna alla home</a>
                     </div>

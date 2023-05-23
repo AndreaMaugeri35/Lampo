@@ -2,12 +2,14 @@
 
     <div class="container my-5">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8 my-5">
+            <div class="col-12 col-md-8 my-2">
 
                 @auth
                     
-                <h2 class="text-center">Inserisci il tuo annuncio</h2>
                 <form class="shadow p-5 rounded bg-white" wire:submit.prevent="store">
+
+                    <h2 class="text-center display-3">Inserisci il tuo annuncio</h2>
+
                     @csrf
 
                     
@@ -30,7 +32,7 @@
 
                     <div class="mb-3">
                         <label for="price" class="form-label">Prezzo</label>
-                        <input type="number" step="0.01" wire:model="price" class="form-control @error('price') is-invalid @enderror" id="price"> @error('price'){{$message}} @enderror
+                        <input type="number" step="0.01" wire:model="price" class="form-control w-25 d-inline @error('price') is-invalid @enderror" id="price"> @error('price'){{$message}} @enderror <span>€</span>
                     </div>
                     <div class="mb-3">
                         <label for="category" class="form-label">Categoria</label>
