@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[PublicController::class,'homepage'])->name('homepage');
-Route::get('/Announcement/create',[AnnouncementController::class, 'create'])->name('announcement.create');
+Route::get('/category/{category}',[PublicController::class,'show'])->name('categoryShow');
+
+Route::get('/Announcement/create',[AnnouncementController::class, 'create'])->middleware('auth')->name('announcement.create');
+Route::get('/Announcement/show/{announcement}',[AnnouncementController::class, 'show'])->name('announcement.show');
+Route::get('/Announcement/index',[AnnouncementController::class,'index'])->name('announcement.index');
 
 

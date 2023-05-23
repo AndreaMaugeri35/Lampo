@@ -32,7 +32,7 @@ class AnnouncementCreate extends Component
         public function store(){
             $this->validate();
             $category = Category::find($this->category);
-            $announcement = $category->announcements()->create([
+            $announcement=$category->announcements()->create([
                 'title'=>$this->title,
                 'body'=>$this->body,
                 'price'=>$this->price

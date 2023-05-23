@@ -7,12 +7,14 @@ use Illuminate\Http\Request;
 
 class AnnouncementController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $announcements= Announcement::paginate(8);
+        return view('Announcement.index',compact('announcements'));
     }
 
     /**
@@ -36,7 +38,7 @@ class AnnouncementController extends Controller
      */
     public function show(Announcement $announcement)
     {
-        //
+        return view('announcement.show',compact('announcement'));
     }
 
     /**
