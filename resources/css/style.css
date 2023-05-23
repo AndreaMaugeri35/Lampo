@@ -1,0 +1,52 @@
+:root{
+    --primary: #EE8300;
+    --secondary: #133862;
+    --third: #C7C7C7;
+    --blacky: #2A2929;
+    --whitey: #ECEBE5;
+}
+
+.logo{
+    width: 200px;
+}
+
+.dropdaun, body{
+    background: rgb(2,0,36);
+background: linear-gradient(146deg, rgba(2,0,36,0) 0%, rgba(19,56,98,1) 35%, rgba(19,56,98,1) 100%);
+}
+.text-primaryC{
+    color: var(--primary);
+}
+.text-secondaryC{
+    color: var(--secondary);
+}
+.text-thirdC{
+    color: var(--third);
+}
+.text-whiteC{
+    color: var(--whity);
+}
+.text-blackC{
+    color: var(--blacky);
+}
+
+
+.background-primaryC{
+    background-color: var(--primary);
+}
+
+.background-secondaryC{
+    background-color: var(--secondary);
+}
+
+.background-accentC{
+    background-color: var(--accent);
+}
+
+.background-whiteC{
+    background-color: var(--whity);
+}
+
+.background-blackC{
+    background-color: var(--blacky);
+}

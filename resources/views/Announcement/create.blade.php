@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Inserisci un annuncio">
 
     @livewire('announcement-create')
 

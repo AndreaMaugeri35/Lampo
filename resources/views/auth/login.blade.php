@@ -1,9 +1,9 @@
 
-<x-layout>
+<x-layout title="Login">
 
-    <div class="container p-5">
+    <div class="container p-5 my-5">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-8 my-5">
             <form class="shadow p-5 bg-white rounded" action="{{route('login')}}" method="POST">
 
                 @csrf

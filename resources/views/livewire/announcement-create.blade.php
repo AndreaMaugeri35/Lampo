@@ -2,7 +2,7 @@
 
     <div class="container my-5">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-8 my-5">
 
                 @auth
                     
@@ -10,15 +10,7 @@
                 <form class="shadow p-5 rounded bg-white" wire:submit.prevent="store">
                     @csrf
 
-                    {{-- @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif --}}
+                    
 
                     @if (session()->has('message'))
                         <div class="alert alert-success text-center">

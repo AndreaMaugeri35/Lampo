@@ -1,10 +1,10 @@
-<x-layout>
+<x-layout title="{{$category->name}}">
 
-    <div class="container">
+    <div class="container my-5">
         <div class="row justify-content-center">
             
                 @forelse ($category->announcements as $announcement)
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 my-5">
                         <div class="card">
                             <img src="https://picsum.photos/200" class="card-img-top" alt="...">
                             

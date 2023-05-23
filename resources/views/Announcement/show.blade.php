@@ -1,5 +1,5 @@
-<x-layout>
-    <div class="container">
+<x-layout title="{{$announcement->title}}">
+    <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 mt-5">
                 <div class="card">

@@ -1,15 +1,11 @@
-<x-layout>
+<x-layout title="Vendilo.it">
 
-<div class="container">
+<div class="container my-5">
     <div class="row justify-content-center">
-        <div class="col-12 my-3">
-            @auth
-            <a href="{{route('announcement.create')}}" class="btn btn-primary">inserisci un annuncio</a>
-            @endauth
-        </div>
+      
         
         @forelse ($announcements as $announcement)
-        <div class="col-12 col-md-3 my-3">
+        <div class="col-12 col-md-3 my-5">
             <div class="card">
                 <img src="https://picsum.photos/200" class="card-img-top" alt="...">
                 
@@ -26,6 +22,12 @@
                 <div class="col-12">Non ci sono annunci</div>
                 <a href="{{route('announcement.create')}}" class="btn btn-primary">Pubblicane uno</a>
         @endforelse
+            <div class="col-12 my-3">
+                @auth
+                <a href="{{route('announcement.create')}}" class="btn btn-primary">inserisci un annuncio</a>
+                @endauth
+            </div>
+        </div>
     </div>
 </div>
 
