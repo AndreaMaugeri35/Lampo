@@ -15,6 +15,7 @@
           <li class="nav-item">
             <a class="nav-link mx-2 @if(Route::is('announcement.index')) activeNav @else btn-link @endif" href="{{route('announcement.index')}}">Tutti gli annunci</a>
           </li>
+          
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle mx-2 @if(Route::is('categoryShow')) activeNav @else btn-link @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categorie
@@ -25,7 +26,15 @@
                   
               @endforeach
             </ul>
-            
+            @auth
+            @if(Auth::user()->is_revisor)
+            <li class="nav-item">
+              <a class="nav-link mx-2 @if(Route::is('announcement.index')) activeNav @else btn-link @endif" href="{{route('revisor.index')}}">Zona Revisore</a>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{App\Models\Announcement::toBeRevisionedCount()}}<span class="visually-hidden">unread messages</span>
+                </span>
+            </li>
+            @endif
+            @endauth
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle btn-link mx-2 @if(Route::is('login')) activeNav @elseif(Route::is('register')) active @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Area utente

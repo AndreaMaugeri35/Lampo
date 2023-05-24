@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class PublicController extends Controller
 {
     public function homepage(){
-        $announcements= Announcement::orderBy('created_at','desc')->take(6)->get();
+        $announcements= Announcement::orderBy('created_at','desc')->where('is_accepted', true)->take(6)->get();
         $categories= Category::all();
         return view('welcome',compact('announcements','categories'));
     }

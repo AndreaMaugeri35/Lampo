@@ -3,7 +3,7 @@
     <div class="container my-2">
         <div class="row justify-content-center">
             
-                @forelse ($category->announcements->sortByDesc('created_at') as $announcement)
+                @forelse ($category->announcements->where('is_accepted', true)->sortByDesc('created_at') as $announcement)
                     <div class="col-12 col-md-3 my-5">
                         <div class="card">
                             <img src="https://picsum.photos/200" class="card-img-top" alt="...">
