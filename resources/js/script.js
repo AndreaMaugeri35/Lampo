@@ -1,30 +1,38 @@
-let prevScrollpos = window.pageYOffset;
 let navbar = document.querySelector("#navbar");
 
-window.onscroll = function() {
-  let currentScrollPos = window.pageYOffset;
+// Script Navbar Dinamica
 
-  if (prevScrollpos < currentScrollPos) {
-    // Scrolling verso il basso
-    navbar.classList.add("navbar-hidden");
+window.addEventListener('scroll', ()=>{
+
+  if(window.scrollY > 0){
+
+      navbar.classList.remove('bg-transparent');
+      navbar.classList.add('background-secondaryC');
+      navbar.classList.add("navbar-dark");
+      navbar.classList.remove("navbar-light");
+
   } else {
-    // Scrolling verso l'alto o in cima alla pagina
-    navbar.classList.remove("navbar-hidden");
+
+      navbar.classList.remove('background-secondaryC');
+      navbar.classList.add('bg-transparent');
+      navbar.classList.remove("navbar-dark");
+      navbar.classList.add("navbar-light");
+
   }
+})
 
-  prevScrollpos = currentScrollPos;
-  if (window.pageYOffset == 0){
-    navbar.classList.add("bg-transparent");
-    navbar.classList.remove("background-secondaryC");
-    navbar.classList.add("navbar-light");
-    navbar.classList.remove("navbar-dark");
+// Fine script Navbar Dinamica
+
+// Sezione evento Toggle Mobile
+
+let navbar_toggler = document.querySelector('#bottone');
+
+navbar_toggler.addEventListener('click', ()=>{
+
+  navbar.classList.toggle('background-secondaryC2');
 
 
-  
-  } else{
-    navbar.classList.remove("bg-transparent");
-    navbar.classList.add("background-secondaryC");
-    navbar.classList.remove("navbar-light");
-    navbar.classList.add("navbar-dark");
-  }
-}
+})
+
+// Fine sezione evento Toggle Mobile
+
