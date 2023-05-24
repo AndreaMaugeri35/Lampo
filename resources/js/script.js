@@ -16,9 +16,15 @@ window.onscroll = function() {
   if (window.pageYOffset == 0){
     navbar.classList.add("bg-transparent");
     navbar.classList.remove("background-secondaryC");
+    navbar.classList.add("navbar-light");
+    navbar.classList.remove("navbar-dark");
+
+
   
   } else{
     navbar.classList.remove("bg-transparent");
     navbar.classList.add("background-secondaryC");
+    navbar.classList.remove("navbar-light");
+    navbar.classList.add("navbar-dark");
   }
 }
