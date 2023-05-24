@@ -7,11 +7,8 @@
   
       <!-- Section: Text -->
       <section class="mb-4">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-          distinctio earum repellat quaerat voluptatibus placeat nam,
-          commodi optio pariatur est quia magnam eum harum corrupti dicta,
-          aliquam sequi voluptate quas.
+        <p>Lavora con noi: 
+          <a class="btn btn-primary" href="{{ route('become.revisor') }}">Diventa revisore</a>
         </p>
       </section>
       <!-- Section: Text -->
@@ -22,7 +19,7 @@
   
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2020 Copyright:
+      © 2023 Copyright:
       <a class="text-white" href="{{route('homepage')}}">Vendilo.it</a>
     </div>
     <!-- Copyright -->
