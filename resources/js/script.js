@@ -1,8 +1,8 @@
-var prevScrollpos = window.pageYOffset;
-var navbar = document.getElementById("navbar");
+let prevScrollpos = window.pageYOffset;
+let navbar = document.querySelector("#navbar");
 
 window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
+  let currentScrollPos = window.pageYOffset;
 
   if (prevScrollpos < currentScrollPos) {
     // Scrolling verso il basso

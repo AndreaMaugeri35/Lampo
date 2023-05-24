@@ -13,9 +13,11 @@
                               <p class="card-title fw-bold">{{$announcement->category->name}}</p>
                               <p class="card-text">{{$announcement->price}} €</p>
                               <p class="card-text">Pubblicato il :{{$announcement->created_at->format('d/m/Y')}} - Da: {{$announcement->user->name ?? ''}}</p>
-                              <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btn-primary">Maggiori dettagli</a>
+                              <a href="{{route('announcement.show',compact('announcement'))}}" class="mb-1 btn btn-primary">Maggiori dettagli</a>
+                              <p class="card-footer">Pubblicato il :{{$announcement->created_at->format('d/m/Y')}} - Da: {{$announcement->user->name ?? ''}}</p>
                             </div>
-                          </div>
+                        </div>
+                    </div>
                     @empty
                         <div class="col-12 d-flex flex-column my-5 align-items-center">
                             <h2 class="text-center text-primaryC display-3 fw-bold">Non ci sono annunci</h2>

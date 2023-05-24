@@ -7,16 +7,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link mx-2 @if(Route::is('homepage')) active @else btn-link @endif" aria-current="page" href="{{route('homepage')}}">Home</a>
+            <a class="nav-link mx-2 @if(Route::is('homepage')) activeNav @else btn-link @endif" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 @if(Route::is('announcement.create')) active @else btn-link @endif" href="{{route('announcement.create')}}">Inserisci un annuncio</a>
+            <a class="nav-link mx-2 @if(Route::is('announcement.create')) activeNav @else btn-link @endif" href="{{route('announcement.create')}}">Inserisci un annuncio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 @if(Route::is('announcement.index')) active @else btn-link @endif" href="{{route('announcement.index')}}">Tutti gli annunci</a>
+            <a class="nav-link mx-2 @if(Route::is('announcement.index')) activeNav @else btn-link @endif" href="{{route('announcement.index')}}">Tutti gli annunci</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle mx-2 @if(Route::is('categoryShow')) active @else btn-link @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle mx-2 @if(Route::is('categoryShow')) activeNav @else btn-link @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categorie
             </a>
             <ul class="dropdown-menu dropdaun">
@@ -27,7 +27,7 @@
             </ul>
             
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle btn-link mx-2 @if(Route::is('login')) active @elseif(Route::is('register')) active @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle btn-link mx-2 @if(Route::is('login')) activeNav @elseif(Route::is('register')) active @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Area utente
               </a>
               @auth
