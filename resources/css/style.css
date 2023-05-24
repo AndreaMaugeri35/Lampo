@@ -67,7 +67,8 @@ body{
 /* Sezione Bottoni */
 
 .btn-link:hover{
-    color:rgb(77, 222, 255);
+    /* color:rgb(77, 222, 255); */
+    color: var(--secondary);
     transform: scale(1.1);
 }
 
@@ -110,6 +111,10 @@ body{
     }
     li{
         padding-left: 40px;
+    }
+
+    .nav-link{
+        color: white;
     }
 }
 
