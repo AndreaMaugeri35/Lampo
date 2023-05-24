@@ -12,7 +12,7 @@
                           <p class="card-text">{{$announcement->price}} €</p>
                           <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btn-primary">Maggiori dettagli</a>
                           <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="my-1 btn btn-primary btnCategory">Categoria: {{$announcement->category->name}}</a>
-                          <p class="card-footer">Pubblicato il :{{$announcement->created_at->format('d/m/Y')}} - Da: {{$announcement->user->name ?? ''}}</p>
+                          <p class="card-footer">Pubblicato il :{{$announcement->created_at->format('d/m/Y')}}</p>
                         </div>
                     </div>
                 </div>
