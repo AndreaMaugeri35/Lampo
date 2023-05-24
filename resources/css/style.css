@@ -11,10 +11,7 @@
 }
 
 body{
-    background-image: url(/public/media/bg.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background-color: var(--whitey);
 }
 
 .text-primaryC{
@@ -98,7 +95,7 @@ body{
         display:none !important;
     }
     .nav{
-        background-color: var(--blacky)!important;
+        background-color: var(--secondary)!important;
     }
     li{
         padding-left: 40px;

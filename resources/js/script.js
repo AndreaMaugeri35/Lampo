@@ -15,10 +15,10 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
   if (window.pageYOffset == 0){
     navbar.classList.add("bg-transparent");
-    navbar.classList.remove("bg-dark");
+    navbar.classList.remove("background-secondaryC");
   
   } else{
     navbar.classList.remove("bg-transparent");
-    navbar.classList.add("bg-dark");
+    navbar.classList.add("background-secondaryC");
   }
 }
