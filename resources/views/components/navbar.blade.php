@@ -1,7 +1,7 @@
-<nav class="navbar nav navbar-expand-lg bg-transparent  fixed-top" id="navbar">
+<nav class="navbar nav navbar-expand-lg bg-transparent fixed-top" id="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{route('homepage')}}"><img class="logo" src="/media/navbar.png" alt="logo"></a>
-      <button class="navbar-toggler background-primaryC" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button id="bottone" class="navbar-toggler background-primaryC" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
