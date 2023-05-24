@@ -64,4 +64,9 @@ class AnnouncementController extends Controller
     {
         //
     }
+
+    public function showProfile(Announcement $announcement)
+    {
+        return view('announcement.profile', compact('announcement'));
+    }
 }

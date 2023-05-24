@@ -68,7 +68,7 @@ body{
 
 .btn-link:hover{
     /* color:rgb(77, 222, 255); */
-    color: var(--secondary);
+    /* color: var(--blacky); */
     transform: scale(1.1);
 }
 

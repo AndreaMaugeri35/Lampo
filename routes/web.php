@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\AnnouncementController;
-use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\AnnouncementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +22,9 @@ Route::get('/category/{category}',[PublicController::class,'show'])->name('categ
 Route::get('/Announcement/create',[AnnouncementController::class, 'create'])->middleware('auth')->name('announcement.create');
 Route::get('/Announcement/show/{announcement}',[AnnouncementController::class, 'show'])->name('announcement.show');
 Route::get('/Announcement/index',[AnnouncementController::class,'index'])->name('announcement.index');
+
+
+Route::get('/profile',[UserController::class,'profile'])->middleware('auth')->name('user.profile');
+Route::get('/Announcement/show/profile/{announcement}', [AnnouncementController::class, 'showProfile'])->name('announcement.profile');
 
 

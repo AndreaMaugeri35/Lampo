@@ -32,7 +32,7 @@
               </a>
               @auth
             <ul class="dropdown-menu dropdaun">
-              
+              <li><a class="dropdown-item" href="{{route('user.profile')}}">Profilo</a></li>
               <li><hr class="dropdown-divider"></li>
               <li>
                 <a class="dropdown-item" href="#" onclick="event.preventDefault();document.querySelector('#form-logout').submit();">Logout</a>
