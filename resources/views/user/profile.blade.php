@@ -22,7 +22,7 @@
                     </div>
                 @endforelse
                     <div class="col-12 my-5 d-flex flex-column align-items-center">               
-                        <a href="{{route('announcement.create')}}" class="btn btn-primary my-5">Pubblica un nuovo annuncio</a>
+                        <a href="{{route('announcement.create')}}" class="btn btnCategory text-white my-5">Pubblica un nuovo annuncio</a>
                     </div>       
         </div>
     </div>

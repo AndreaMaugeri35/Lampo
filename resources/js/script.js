@@ -7,17 +7,14 @@ window.addEventListener('scroll', ()=>{
   if(window.scrollY > 0){
 
       navbar.classList.remove('bg-transparent');
-      navbar.classList.add('background-secondaryC');
-      navbar.classList.add("navbar-dark");
-      navbar.classList.remove("navbar-light");
+      navbar.classList.add('background-blacky');
+      
 
   } else {
 
-      navbar.classList.remove('background-secondaryC');
+      navbar.classList.remove('background-blacky');
       navbar.classList.add('bg-transparent');
-      navbar.classList.remove("navbar-dark");
-      navbar.classList.add("navbar-light");
-
+    
   }
 })
 
@@ -29,10 +26,23 @@ let navbar_toggler = document.querySelector('#bottone');
 
 navbar_toggler.addEventListener('click', ()=>{
 
-  navbar.classList.toggle('background-secondaryC2');
+  
+
+
+
+  navbar.classList.toggle('background-blacky');
 
 
 })
 
-// Fine sezione evento Toggle Mobile
+let prevScrollpos = window.pageYOffset;
+  
+  if(prevScrollpos < window.scrollY){
 
+    document.getElementById("#bottone").click();
+
+
+  }
+
+
+// Fine sezione evento Toggle Mobile

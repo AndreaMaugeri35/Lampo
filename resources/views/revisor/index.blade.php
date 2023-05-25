@@ -45,7 +45,7 @@
     <form action="{{ route('revisor.rollbackTransaction') }}" method="POST">
         @csrf
         @method('PATCH')
-        <button class="shadow btn btn-success mt-5 mb-5" type="submit">Annulla ultima operazione</button>
+        <button class="btn btnCategory text-white mt-5 mb-5" type="submit">Annulla ultima operazione</button>
     </form>
 
 

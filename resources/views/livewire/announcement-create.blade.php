@@ -43,7 +43,7 @@
                             @endforeach
                             </select>
                     </div>
-                        <button type="submit" class="btn btn-primary">Crea articolo</button>
+                        <button type="submit" class="btn btn-primary text-white">Crea articolo</button>
 
                 </form>
                 @endauth

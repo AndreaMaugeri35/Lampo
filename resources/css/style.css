@@ -1,17 +1,25 @@
+
 :root{
-    --primary: #EE8300;
-    --secondary: #133862;
-    --third: #C7C7C7;
-    --blacky: #2A2929;
+    --primary: #2b3873;
+    --secondary: #fbf9f1;
+    --accent: #A238FF;
+    --blacky: #222323;
     --whitey: #ECEBE5;
+
+    font-family: 'DM Mono', monospace;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+
 }
 
 .logo{
-    width: 200px;
+    width: 100px;
+   
 }
 
 body{
-    background-color: var(--whitey);
+    background-image: url('/public/media/bgfinalproject.jpg');
+    font-family: 'DM Mono';
 }
 
 /* Colori Testi */
@@ -22,8 +30,8 @@ body{
 .text-secondaryC{
     color: var(--secondary);
 }
-.text-thirdC{
-    color: var(--third);
+.text-accentC{
+    color: var(--accent);
 }
 .text-whiteC{
     color: var(--whity);
@@ -60,36 +68,62 @@ body{
 }
 
 .activeNav{
-    color: var(--primary) !important;
+    color: var(--secondary) !important;
     transform: scale(1.2);
 }
 
 /* Sezione Bottoni */
 
 .btn-link:hover{
-    /* color:rgb(77, 222, 255); */
-    /* color: var(--blacky); */
+    color: var(--secondary);
     transform: scale(1.1);
 }
 
 .btn{
-    background-color: var(--primary);
-    border: var(--primary);
+    color: (var(--accent));
+    box-shadow: 1px 1px 15px 5px rgba(183, 0, 255, 0.37);
+    background-color: var(--whitey);
+    border: var(--whitey);
 }
 .btnCategory{
-    background-color: var(--secondary);
-    border: var(--secondary);
+    box-shadow: 1px 1px 15px 5px rgba(183, 0, 255, 0.37);
+    background-color: var(--accent);
+    border: var(--accent);
 }
 
 .btn:hover{
-    color: var(--secondary) !important;
+    color: var(--whitey) !important;
     transform: scale(1.1);
-    background-color: var(--primary);
+    background-color: var(--accent);
 }
 .btnCategory:hover{
-    color: var(--primary) !important;
+    color: var(--blacky) !important;
     transform: scale(1.1);
-    background-color: var(--secondary);
+    background-color: var(--whitey);
+    border-color: #A238FF;
+}
+
+.card{
+    
+        background: linear-gradient(280deg,rgba(210, 123, 245, 0.2),rgba(255,255,255,0));
+        border-radius: 10px;
+        transition: all 0.3s;
+        border:1px solid rgba(255, 255, 255, 0.18);
+        background-color: #fbf9f100;
+        
+    }
+
+.card-text, .card-body{
+    color:var(--whitey);
+}
+
+.card:hover{
+    transform: scale(1.1);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 8px 50px 14px rgba(183, 0, 255, 0.37);
+    border:1px solid rgba(255, 255, 255, 0.18);
+
 }
 
 /* Sezione Navbar */
@@ -103,19 +137,19 @@ body{
 }
 
 @media screen and (max-width: 650px) {
-    .header{
-        display:none !important;
-    }
+
     .nav{
-        background-color: var(--secondary);
+        background-color: var(--blacky);
     }
+
     li{
         padding-left: 40px;
     }
 
-    .nav-link{
-        color: white;
-    }
+}
+
+.nav-link{
+    color: white;
 }
 
 /* Fine sezione Navbar */

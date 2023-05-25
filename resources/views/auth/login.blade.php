@@ -31,7 +31,7 @@
                     <label class="form-check-label"  for="remember">Ricordami</label>
                     <input type="checkbox" name="remember" class="form-check-input" id="remember">
                 </div>
-                <button type="submit" class="btn btn-primary">Accedi</button>
+                <button type="submit" class="btn btn-primary text-white">Accedi</button>
                 <p class="mt-2">Non sei ancora registrato? Fai la <a href="{{route('register')}}">Registrati</a></p> 
               </form>
             </div>

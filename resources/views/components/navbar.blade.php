@@ -1,7 +1,7 @@
-<nav class="navbar nav navbar-expand-lg bg-transparent fixed-top fs-5" id="navbar">
+<nav class="navbar nav navbar-expand-lg bg-transparent fixed-top fs-7" id="navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{{route('homepage')}}"><img class="logo" src="/media/navbar.png" alt="logo"></a>
-      <button id="bottone" class="navbar-toggler background-primaryC" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="{{route('homepage')}}"><img class="logo" src="/media/cover1.png" alt="logo"></a>
+      <button id="bottone" class="navbar-toggler background-blacky" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -29,7 +29,7 @@
             @auth
             @if(Auth::user()->is_revisor)
             <li class="nav-item">
-              <a class="nav-link mx-2 @if(Route::is('announcement.index')) activeNav @else btn-link @endif" href="{{route('revisor.index')}}">Zona Revisore ({{App\Models\Announcement::toBeRevisionedCount() ?? ''}})</a>
+              <a class="nav-link mx-2 @if(Route::is('revisor.index')) activeNav @else btn-link @endif" href="{{route('revisor.index')}}">Zona Revisore ({{App\Models\Announcement::toBeRevisionedCount() ?? ''}})</a>
             </li>
             @endif
             @endauth
@@ -56,7 +56,7 @@
         </ul>
         <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
           <input name="searched" class="form-control me-2" type="search" placeholder="Cerca annunci" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Cerca</button>
+          <button class="btn btnCategory text-white" type="submit">Cerca</button>
         </form>
       </div>
     </div>
