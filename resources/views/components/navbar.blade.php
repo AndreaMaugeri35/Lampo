@@ -29,9 +29,7 @@
             @auth
             @if(Auth::user()->is_revisor)
             <li class="nav-item">
-              <a class="nav-link mx-2 @if(Route::is('announcement.index')) activeNav @else btn-link @endif" href="{{route('revisor.index')}}">Zona Revisore</a>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{App\Models\Announcement::toBeRevisionedCount()}}<span class="visually-hidden">unread messages</span>
-                </span>
+              <a class="nav-link mx-2 @if(Route::is('announcement.index')) activeNav @else btn-link @endif" href="{{route('revisor.index')}}">Zona Revisore ({{App\Models\Announcement::toBeRevisionedCount() ?? ''}})</a>
             </li>
             @endif
             @endauth
@@ -56,10 +54,10 @@
             </ul>
           </li>
         </ul>
-        {{-- <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> --}}
+        <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
+          <input name="searched" class="form-control me-2" type="search" placeholder="Cerca annunci" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Cerca</button>
+        </form>
       </div>
     </div>
   </nav>

@@ -18,4 +18,10 @@ class PublicController extends Controller
     {
         return view('Announcement.categoryShow',compact('category'));
     }
+
+    public function searchAnnouncements(Request $request){
+
+        $announcements = Announcement::search($request->searched)->where('is_accepted',true)->paginate(8);
+        return view('Announcement.index', compact('announcements'));
+    }
 }
