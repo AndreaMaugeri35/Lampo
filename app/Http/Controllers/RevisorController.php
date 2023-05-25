@@ -37,5 +37,14 @@ class RevisorController extends Controller
         return redirect('/')->with('message', 'Complimenti! L\'utente e diventato revisore!');
     }
 
+    
+
+   public function rollbackTransaction()
+        {
+            $announcement = Announcement::where('is_accepted', '!=', null)->get()->reverse()->first();
+            $announcement->setAccepted(null);
+            return redirect()->back()->with('message', 'Complimenti! Hai accettato l\'annuncio');
+        }
+
 }    
 
