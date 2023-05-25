@@ -1,4 +1,4 @@
-<x-layout title="Profilo di {{Auth::user()->name}}">
+<x-layout title="Il tuo profilo: {{Auth::user()->name}}" header="Benvenuto nella tua area personale, {{Auth::user()->name}}">
     <div class="container my-5">
         <div class="row justify-content-center">
             

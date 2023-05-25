@@ -1,5 +1,5 @@
 
-<x-layout title="Login">
+<x-layout title="Login" header="Bentornato">
 
     <div class="container p-5 my-2">
         <div class="row justify-content-center">

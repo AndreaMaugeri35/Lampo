@@ -1,4 +1,4 @@
-<x-layout title="{{$announcement->user->name}}">
+<x-layout title="Profilo di {{$announcement->user->name}}" header="Ecco gli annunci di {{$announcement->user->name}}">
     <div class="container my-2">
         <div class="row justify-content-center">
           
@@ -11,9 +11,9 @@
                     <div class="card-body">
                       <h5 class="card-title">{{$announcement->title}}</h5>
                       <p class="card-text">{{$announcement->price}} €</p>
-                      <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btn-primary text-white">Maggiori dettagli</a>
+                      <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btn-primary">Maggiori dettagli</a>
                       <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="my-1 btn btn-primary btnCategory text-white">Categoria: {{$announcement->category->name}}</a>
-                      <p class="card-footer">Pubblicato il :{{$announcement->created_at->format('d/m/Y')}} - Da: <a href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement->user->name ?? ''}}</a> </p>
+                      <p class="card-footer">Pubblicato il :{{$announcement->created_at->format('d/m/Y')}} - Da:>{{$announcement->user->name ?? ''}}</a> </p>
                     </div>
                   </div>
                 </div>

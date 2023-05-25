@@ -1,4 +1,4 @@
-<x-layout title="Tutti gli annunci">
+<x-layout title="Tutti gli annunci" header="Qui troverai di tutto, ma proprio tutto">
 
     <div class="container my-2">
         <div class="row justify-content-center">

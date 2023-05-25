@@ -1,4 +1,4 @@
-<x-layout title="Vendilo.it">
+<x-layout title="Vendilo.it" header="Non lo usi? Mettilo in vendita">
 
     <div class="container my-2">
         <div class="row justify-content-center">

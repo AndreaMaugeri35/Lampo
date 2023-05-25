@@ -152,8 +152,10 @@ body{
 @media screen and (max-width: 650px) {
 
     .nav{
-        background-color: var(--blacky) ;
+        background-color: var(--blacky) !important ;
     }
+
+    
 
     li{
         padding-left: 40px;
@@ -178,3 +180,4 @@ body{
                
 }
 
+navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }

@@ -1,4 +1,4 @@
-<x-layout title="{{$category->name}}">
+<x-layout title="{{$category->name}}" header="Annunci filtrati per catregoria :  {{$category->name}}">
 
     <div class="container my-2">
         <div class="row justify-content-center">

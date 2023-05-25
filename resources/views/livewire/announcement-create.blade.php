@@ -6,7 +6,7 @@
 
                 @auth
                     
-                <form class=" p-5 bg-white" wire:submit.prevent="store">
+                <form class="formC p-5 bg-white" wire:submit.prevent="store">
 
                     <h2 class="text-center display-3">Inserisci il tuo annuncio</h2>
 

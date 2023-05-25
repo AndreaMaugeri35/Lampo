@@ -1,7 +1,7 @@
-<nav class="navbar nav navbar-expand-lg  bg-transparent fixed-top fs-7" id="navbar">
+<nav class="navbar nav navbar-expand-lg  fixed-top fs-7" id="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{route('homepage')}}"><img class="logo" src="/media/cover1.png" alt="logo"></a>
-      <button id="bottone" class="navbar-toggler background-blacky" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button id="bottone" class="navbar-toggler btnCategory" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -20,9 +20,9 @@
             <a class="nav-link dropdown-toggle mx-2 @if(Route::is('categoryShow')) activeNav @else btn-link @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categorie
             </a>
-            <ul class="dropdown-menu dropdaun">
+            <ul class="dropdown-menu background-accentC">
               @foreach ($categories as $category)
-              <li><a class="dropdown-item" href="{{route('categoryShow',compact('category'))}}">{{$category->name}}</a></li>
+              <li><a class="text-white dropdown-item" href="{{route('categoryShow',compact('category'))}}">{{$category->name}}</a></li>
                   
               @endforeach
             </ul>
@@ -34,15 +34,15 @@
             @endif
             @endauth
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle btn-link mx-2 @if(Route::is('login')) activeNav @elseif(Route::is('register')) active @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle btn-link mx-2 @if(Route::is('login')) activeNav @elseif(Route::is('register')) active  @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Area utente
               </a>
               @auth
-            <ul class="dropdown-menu dropdaun">
-              <li><a class="dropdown-item" href="{{route('user.profile')}}">Profilo</a></li>
+            <ul class="dropdown-menu background-accentC">
+              <li><a class="dropdown-item text-white" href="{{route('user.profile')}}">Profilo di {{Auth::user()->name}}</a></li>
               <li><hr class="dropdown-divider"></li>
               <li>
-                <a class="dropdown-item" href="#" onclick="event.preventDefault();document.querySelector('#form-logout').submit();">Logout</a>
+                <a class="dropdown-item text-white" href="#" onclick="event.preventDefault();document.querySelector('#form-logout').submit();">Logout</a>
                 </li>
                 <form id="form-logout" action="{{route('logout')}}" method="POST" class="d-none">@csrf</form>
               @else

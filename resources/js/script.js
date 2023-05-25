@@ -1,5 +1,8 @@
 let navbar = document.querySelector("#navbar");
 
+
+
+
 // Script Navbar Dinamica
 
 window.addEventListener('scroll', ()=>{
@@ -18,22 +21,10 @@ window.addEventListener('scroll', ()=>{
   }
 })
 
+
 // Fine script Navbar Dinamica
 
 // Sezione evento Toggle Mobile
 
-let navbar_toggler = document.querySelector('#bottone');
 
 
-navbar_toggler.addEventListener('click', ()=>{
-
-
-    navbar.classList.remove('bg-transparent');
-
-})
-
-
-
-
-
-// Fine sezione evento Toggle Mobile
