@@ -6,21 +6,18 @@
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
-      <a class="text-white btn-floating m-1"  href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+      <a class="text-white btn-floating m-1"  href="https://www.facebook.com/" target="blank" role="button"><i class="fab fa-facebook-f"></i></a>
 
       <!-- Twitter -->
-      <a class="text-white btn-floating m-1"  href="#!" role="button"><i class="fab fa-twitter"></i></a>
-
-      <!-- Google -->
-      <a class="text-white btn-floating m-1"  href="#!" role="button"><i class="fab fa-google"></i></a>
+      <a class="text-white btn-floating m-1"  href="https://twitter.com/" target="blank" role="button"><i class="fab fa-twitter"></i></a>
 
       <!-- Instagram -->
-      <a class="text-white btn-floating m-1"  href="#!" role="button"><i class="fab fa-instagram"></i></a>
+      <a class="text-white btn-floating m-1"  href="https://www.instagram.com/" target="blank" role="button"><i class="fab fa-instagram"></i></a>
 
       <!-- Linkedin -->
-      <a class="text-white btn-floating m-1"  href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+      <a class="text-white btn-floating m-1"  href="https://www.linkedin.com/" target="blank" role="button"><i class="fab fa-linkedin-in"></i></a>
       <!-- Github -->
-      <a class="text-white btn-floating m-1"  href="#!" role="button"><i class="fab fa-github"></i></a>
+      <a class="text-white btn-floating m-1"  href="https://www.github.com/" target="blank" role="button"><i class="fab fa-github"></i></a>
     </section>
     <!-- Section: Social media -->
 

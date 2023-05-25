@@ -1,4 +1,4 @@
-<nav class="navbar nav navbar-expand-lg bg-transparent fixed-top fs-7" id="navbar">
+<nav class="navbar nav navbar-expand-lg  bg-transparent fixed-top fs-7" id="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{route('homepage')}}"><img class="logo" src="/media/cover1.png" alt="logo"></a>
       <button id="bottone" class="navbar-toggler background-blacky" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -4,7 +4,7 @@
     <div class="container p-5 my-2">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 my-5">
-            <form class="shadow p-5 bg-white rounded" action="{{route('login')}}" method="POST">
+            <form class="p-5 bg-white" action="{{route('login')}}" method="POST">
                 <h2 class="display-3">Accedi</h2>
 
                 @csrf
@@ -31,7 +31,7 @@
                     <label class="form-check-label"  for="remember">Ricordami</label>
                     <input type="checkbox" name="remember" class="form-check-input" id="remember">
                 </div>
-                <button type="submit" class="btn btn-primary text-white">Accedi</button>
+                <button type="submit" class="btn btnCategory">Accedi</button>
                 <p class="mt-2">Non sei ancora registrato? Fai la <a href="{{route('register')}}">Registrati</a></p> 
               </form>
             </div>

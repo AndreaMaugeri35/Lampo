@@ -3,7 +3,7 @@
     <div class="container p-5 my-2">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 my-5">
-            <form class="shadow p-5 bg-white rounded" action="{{route('register')}}" method="POST">
+            <form class="p-5 bg-white" action="{{route('register')}}" method="POST">
                 <h2 class="display-3">Registrati</h2>
 
                 @csrf
@@ -33,7 +33,7 @@
                     <label for="password_confirmation" class="form-label">Conferma Password</label>
                     <input type="password" name="password_confirmation" class="form-control" id="password_confirmation">
                 </div>
-                <button type="submit" class="btn btn-primary text-white">Registrati</button>
+                <button type="submit" class="btn btnCategory">Registrati</button>
                <p class="mt-2">Sei già registrato? Fai il <a href="{{route('login')}}" >Login</a></p> 
               </form>
             </div>

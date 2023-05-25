@@ -22,8 +22,7 @@
                                 class="my-1 btn btn-primary btnCategory">Categoria:
                                 {{ $announcement->category->name }}</a>
                             <p class="card-footer">Pubblicato il :{{ $announcement->created_at->format('d/m/Y') }} - Da:
-                                <a
-                                    href="{{ route('announcement.profile', compact('announcement')) }}">{{ $announcement->user->name ?? '' }}</a>
+                                <a class="btn btnprimaryC " href="{{ route('announcement.profile', compact('announcement')) }}">{{ $announcement->user->name ?? '' }}</a>
                             </p>
                         </div>
                     </div>

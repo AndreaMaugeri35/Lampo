@@ -7,12 +7,12 @@ window.addEventListener('scroll', ()=>{
   if(window.scrollY > 0){
 
       navbar.classList.remove('bg-transparent');
-      navbar.classList.add('background-blacky');
+      navbar.classList.add('background-blackC');
       
 
   } else {
 
-      navbar.classList.remove('background-blacky');
+      navbar.classList.remove('background-blackC');
       navbar.classList.add('bg-transparent');
     
   }
@@ -24,25 +24,16 @@ window.addEventListener('scroll', ()=>{
 
 let navbar_toggler = document.querySelector('#bottone');
 
+
 navbar_toggler.addEventListener('click', ()=>{
 
-  
 
-
-
-  navbar.classList.toggle('background-blacky');
-
+    navbar.classList.remove('bg-transparent');
 
 })
 
-let prevScrollpos = window.pageYOffset;
-  
-  if(prevScrollpos < window.scrollY){
-
-    document.getElementById("#bottone").click();
 
 
-  }
 
 
 // Fine sezione evento Toggle Mobile

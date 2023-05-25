@@ -6,7 +6,7 @@
 
                 @auth
                     
-                <form class="shadow p-5 rounded bg-white" wire:submit.prevent="store">
+                <form class=" p-5 bg-white" wire:submit.prevent="store">
 
                     <h2 class="text-center display-3">Inserisci il tuo annuncio</h2>
 
@@ -43,7 +43,7 @@
                             @endforeach
                             </select>
                     </div>
-                        <button type="submit" class="btn btn-primary text-white">Crea articolo</button>
+                        <button type="submit" class="btn btnCategory">Crea articolo</button>
 
                 </form>
                 @endauth
