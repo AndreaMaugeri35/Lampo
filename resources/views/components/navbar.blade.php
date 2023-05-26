@@ -1,6 +1,6 @@
 <nav class="navbar nav navbar-expand-lg  fixed-top fs-7" id="navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{{route('homepage')}}"><i class="fa-solid fa-bolt fa-2x text-white"></i></a>
+      <a class="navbar-brand" href="{{route('homepage')}}"><i class="fa-sharp fa-solid fa-bolt-lightning fa-fade fa-2x text-white"></i></a>
       <button id="bottone" class="navbar-toggler btnCategory" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

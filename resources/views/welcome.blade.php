@@ -1,23 +1,46 @@
 <x-layout title="Vendilo.it" header="">
 
-    <div class="container-fluid my-2">
+    <div class="container-fluid my-2 seitu">
         <div class="row align-items-center justify-content-center min-vh-100">
             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center h-100">
                 <div class="d-flex align-items-center justify-content-center flex-column text-white">
-                    
-                    <h1 class="">LA<span id="M">M</span><span class="d-none" id="Icon"><i class="fa-solid fa-bolt"></i></span>PO</h1>
-                    <h2>prova titoletto</h2>
+                    <i class="fa-solid text-accentC fa-10x my-5"></i>
+                    <h1 class="display-1 mt-5">LAMPO<span class="text-accentC">.it</span></h1>
+                    <h2 class="mb-5">Non lo usi? Vendilo in un <span class="fa-sharp fa-solid fa-bolt-lightning text-accentC"></span>!</h2>
                     <button id="btn" class="btn btnCategory">button</button>
                 </div>
             </div>
-            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center h-100"><img class="img-fluid" src="/media/cover1.png" alt=""></div>
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center h-100"><img class="img-fluid pngheader" src="/media/header.png" alt=""></div>
         </div>
   </div>
 
+  <div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    @foreach($announcements as $announcement)
+                        <div class="swiper-slide position-relative d-flex">
+                            <img class="w-100 p-5" src="https://picsum.photos/300/200" alt="">
+                            <div class="w-100 position-absolute d-flex flex-column justify-content-end h-100 align-items-center">
+                                <a href="{{route('announcement.show',compact('announcement'))}}" class="h-100 w-100"></a>
+                                <h5 class="text-white display-3">{{$announcement->title}}</h5>
+                                <p class="text-white">{{$announcement->price}}</p> 
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
-    <div class="container my-2">
+
+    {{-- <div class="container my-2">
         <div class="row justify-content-center">
             @if (session('access_denied'))
                 <div class="alert alert-danger text-center">
@@ -54,6 +77,6 @@
             </div>
         </div>
     </div>
-    </div>
+    </div> --}}
 
 </x-layout>
