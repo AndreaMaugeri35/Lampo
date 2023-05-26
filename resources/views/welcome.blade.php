@@ -1,4 +1,21 @@
-<x-layout title="Vendilo.it" header="Non lo usi? Mettilo in vendita">
+<x-layout title="Vendilo.it" header="">
+
+    <div class="container-fluid my-2">
+        <div class="row align-items-center justify-content-center min-vh-100">
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center h-100">
+                <div class="d-flex align-items-center justify-content-center flex-column text-white">
+                    
+                    <h1 class="">LA<span id="M">M</span><span class="d-none" id="Icon"><i class="fa-solid fa-bolt"></i></span>PO</h1>
+                    <h2>prova titoletto</h2>
+                    <button id="btn" class="btn btnCategory">button</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center h-100"><img class="img-fluid" src="/media/cover1.png" alt=""></div>
+        </div>
+  </div>
+
+
+
 
     <div class="container my-2">
         <div class="row justify-content-center">
@@ -7,7 +24,7 @@
                     {{ session('access_denied') }}
                 </div>
             @endif
-
+                
             @forelse ($announcements as $announcement)
                 <div class="col-12 col-md-3 my-5">
                     <div class="card">

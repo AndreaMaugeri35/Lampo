@@ -19,8 +19,11 @@
 
 body{
     background-image: url('/public/media/bgfinalproject.jpg');
+    background-size: cover;
+    /* background-attachment: fixed; */
     font-family: 'DM Mono';
 }
+
 
 /* Colori Testi */
 
