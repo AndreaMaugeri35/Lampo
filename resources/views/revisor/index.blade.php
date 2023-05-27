@@ -2,7 +2,7 @@
     <div class="div container p-5 mb-4">
         <div class="row">
             <div class="col-12 text-light p-5">
-                <h1 class=" display-2 text-center">
+                <h1 class=" display-2 text-center text-white">
                     {{$announcement_to_check ? 'Annuncio da revisionare' : 'Non ci sono Annunci da revisionare'}}
                 </h1>
             </div>

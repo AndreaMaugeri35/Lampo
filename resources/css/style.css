@@ -26,6 +26,8 @@ body{
 }
 .seitu{
     overflow-x: hidden;
+    
+    
 }
 
 
@@ -195,6 +197,7 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
 .pngheader{
     transform : scale(1.6);
     margin-left: 110px;
+    padding-bottom: 10px;
 }
 
 .home{
@@ -218,8 +221,46 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
     color: #A238FF ;
 }
 
-.imgswiper{
-    border: 2px var(--accent);
-    border-radius: 2px;
+.mySwiper1{
+    border-radius: 30px;
+    width: 70vw;
+    height: auto;
     
+ 
+
 }
+
+.glass{
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 8px 50px 14px rgba(210, 123, 245, 0.2);
+   
+}
+
+@media screen and (max-width: 991px) {
+
+    .home1{
+        display: none;
+    }
+}
+
+.glow1 {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow1 1s ease-in-out infinite alternate;
+    -moz-animation: glow1 1s ease-in-out infinite alternate;
+    animation: glow1 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #A238FF, 0 0 40px #A238FF, 0 0 50px #A238FF, 0 0 60px #A238FF, 0 0 70px #A238FF;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #A238FF, 0 0 40px #A238FF, 0 0 50px #A238FF, 0 0 60px #A238FF, 0 0 70px #A238FF, 0 0 80px #A238FF;
+    }
+  }
+
+

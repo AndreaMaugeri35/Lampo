@@ -2,19 +2,15 @@
 
     <div class="container p-5 my-2">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8 my-5">
-            <form class="p-5 bg-white" action="{{route('register')}}" method="POST">
-                <h2 class="display-3">Registrati</h2>
+            <div class="col-12 col-md-8 my-5 d-flex justify-content-center">
+            <form class="p-5 text-white text-center glass" action="{{route('register')}}" method="POST">
+                <h2 class="display-3 mb-5">Registrati</h2>
 
                 @csrf
 
                 @if ($errors->any())
                     <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
+                         <p>Dati errati!</p>
                     </div>
                 @endif
                 <div class="mb-3">
@@ -34,7 +30,8 @@
                     <input type="password" name="password_confirmation" class="form-control" id="password_confirmation">
                 </div>
                 <button type="submit" class="btn btnCategory">Registrati</button>
-               <p class="mt-2">Sei già registrato? Fai il <a href="{{route('login')}}" >Login</a></p> 
+               <p class="mt-3">Sei già registrato? Fai il</p> 
+               <a class="btn btnCategory mt-1" href="{{route('login')}}">Login</a>
               </form>
             </div>
         </div>

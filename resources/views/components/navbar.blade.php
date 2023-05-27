@@ -1,7 +1,7 @@
 <nav class="navbar nav navbar-expand-lg  fixed-top fs-7" id="navbar">
     <div class="container-fluid">
       <a class="navbar-brand mx-0" href="{{route('homepage')}}"><i class="fa-sharp fa-solid fa-bolt-lightning home fa-2x text-white"></i>
-        <a class="nav-link mx-0 home @if(Route::is('homepage')) d-none @else btn-link @endif" aria-current="page" href="{{route('homepage')}}">Home</a>
+        <a class="nav-link mx-0 home1 @if(Route::is('homepage')) d-none @else btn-link @endif" aria-current="page" href="{{route('homepage')}}">Home</a>
       </a>
       <button id="bottone" class="navbar-toggler btnCategory" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -29,13 +29,14 @@
             @auth
             @if(Auth::user()->is_revisor)
             <li class="nav-item">
-              <a class="nav-link mx-2 @if(Route::is('revisor.index')) activeNav @else btn-link @endif" href="{{route('revisor.index')}}">Zona Revisore ({{App\Models\Announcement::toBeRevisionedCount() ?? ''}})</a>
+              <a class="nav-link mx-2 @if(Route::is('revisor.index')) activeNav @else btn-link @endif" href="{{route('revisor.index')}}">Revisor ({{App\Models\Announcement::toBeRevisionedCount() ?? ''}})</a>
             </li>
             @endif
             @endauth
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle btn-link mx-2 @if(Route::is('login')) activeNav @elseif(Route::is('register')) active  @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Area utente
+                <i class="fa-solid fa-user-astronaut fa-lg"></i>
+                
               </a>
               @auth
             <ul class="dropdown-menu background-accentC">

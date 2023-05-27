@@ -6,9 +6,9 @@
 
                 @auth
                     
-                <form class="formC p-5 bg-white" wire:submit.prevent="store">
+                <form class="glass text-white text-center p-5" wire:submit.prevent="store">
 
-                    <h2 class="text-center display-3">Inserisci il tuo annuncio</h2>
+                    <h2 class="display-3 mb-5">Inserisci il tuo annuncio</h2>
 
                     @csrf
 
