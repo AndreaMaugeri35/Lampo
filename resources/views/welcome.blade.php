@@ -7,7 +7,7 @@
                     <i class="fa-solid text-accentC fa-10x my-5"></i>
                     <h1 class="display-1 mt-5">LAMPO<span class="text-accentC">.it</span></h1>
                     <h2 class="mb-5">Non lo usi? Vendilo in un <span class="fa-sharp fa-solid fa-bolt-lightning text-accentC"></span>!</h2>
-                    <button id="btn" class="btn btnCategory">button</button>
+                    <button id="btn" class="btn btnCategory">Pubblica annuncio</button>
                 </div>
             </div>
             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center h-100"><img class="img-fluid pngheader" src="/media/header.png" alt=""></div>
@@ -20,12 +20,14 @@
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     @foreach($announcements as $announcement)
-                        <div class="swiper-slide position-relative d-flex">
-                            <img class="w-100 p-5" src="https://picsum.photos/300/200" alt="">
+                        <div class="swiper-slide position-relative flex-column d-flex imgswiper align-items-center">
+                            <img class="w-75 p-5" src="https://picsum.photos/300/200" alt="">
                             <div class="w-100 position-absolute d-flex flex-column justify-content-end h-100 align-items-center">
                                 <a href="{{route('announcement.show',compact('announcement'))}}" class="h-100 w-100"></a>
-                                <h5 class="text-white display-3">{{$announcement->title}}</h5>
-                                <p class="text-white">{{$announcement->price}}</p> 
+                            </div>
+                            <div class="d-flex flex-column text-center">
+                                  <h5 class="text-white display-4">{{$announcement->title}}</h5>
+                                    <p class="text-white">{{$announcement->price}} €</p> 
                             </div>
                         </div>
                     @endforeach

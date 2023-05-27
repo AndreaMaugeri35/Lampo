@@ -43,7 +43,7 @@
     <!-- Copyright -->
     <div class="text-center p-3">
       © 2023 Copyright:
-      <a class="text-white" href="{{route('homepage')}}">Vendilo.it</a>
+      <a class="text-accentC" href="{{route('homepage')}}">LAMPO.it</a>
     </div>
     <!-- Copyright -->
   

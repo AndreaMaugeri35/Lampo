@@ -196,3 +196,30 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
     transform : scale(1.6);
     margin-left: 110px;
 }
+
+.home{
+    opacity: 1;
+    animation: glow 1s alternate infinite;
+}
+
+@keyframes glow {
+    0%{ opacity: 0};
+    /* 25%{ opacity: 0.70};
+    50%{ opacity: 1};
+    75%{ opacity: 0.70}; */
+    100%{ opacity: 1};
+}
+
+.swiper-button-prev{
+    color: #A238FF ;
+}
+
+.swiper-button-next{
+    color: #A238FF ;
+}
+
+.imgswiper{
+    border: 2px var(--accent);
+    border-radius: 2px;
+    
+}
