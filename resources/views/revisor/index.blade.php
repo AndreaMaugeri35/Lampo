@@ -21,6 +21,8 @@
                   <p class="card-text">{{$announcement_to_check->price}} €</p>
                   <p class="card-text">{{$announcement_to_check->body}}</p>
                   <p class="card-text">{{$announcement_to_check->category->name}}</p>
+                  <p class="card-text">Creato da <a class="btn" href="">{{$announcement_to_check->user->name}}</a></p>
+{{-- @dd($announcement_to_check->user->announcements->where('id', $announcement_to_check->id)) --}}
                 </div>
             </div>
             
