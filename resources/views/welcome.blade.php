@@ -10,7 +10,7 @@
                     <a href="{{route('announcement.create')}}" class="btn btnCategory text-white my-5">Pubblica annuncio</a>
                 </div>
             </div>
-            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center"><img class="img-fluid pngheader" src="/media/header3.png" alt=""></div>
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center"><img class="img-fluid pngheader" src="/media/header4.png" alt=""></div>
         </div>
   </div>
 
