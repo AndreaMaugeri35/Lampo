@@ -19,7 +19,7 @@
         <div class="col-12">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    @foreach($announcements as $announcement)
+                    @forelse($announcements as $announcement)
                         <div class="swiper-slide position-relative flex-column d-flex align-items-center">
                             <img class="w-100 mySwiper1" src="https://picsum.photos/300/200" alt="">
                             <div class="w-100 position-absolute d-flex flex-column justify-content-end h-100 align-items-center">
@@ -30,7 +30,12 @@
                                     <p class="text-white">{{$announcement->price}} €</p> 
                             </div>
                         </div>
-                    @endforeach
+                    @empty
+                        <div class="col-12 d-flex flex-column my-5 align-items-center">
+                            <h2 class="text-center text-white display-3 fw-bold">Non ci sono annunci</h2>
+                            <a href="{{route('announcement.create')}}" class="btn btnCategory text-white my-5">Pubblicane uno</a>
+                        </div>
+                    @endforelse
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>

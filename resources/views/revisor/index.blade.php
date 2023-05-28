@@ -44,6 +44,8 @@
     </div>
     @endif
 
+    @if (App\Models\Announcement::toBeRevisionedCount() != App\Models\Announcement::all()->count() )
+        
     <div class="container">
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
@@ -55,6 +57,7 @@
             </div>
         </div>
     </div>
+    @endif
 
 
 </x-layout>
