@@ -21,7 +21,7 @@
                 <div class="swiper-wrapper">
                     @foreach($announcements as $announcement)
                         <div class="swiper-slide position-relative flex-column d-flex align-items-center">
-                            <img class="mySwiper1" src="https://picsum.photos/300/200" alt="">
+                            <img class="w-100 mySwiper1" src="https://picsum.photos/300/200" alt="">
                             <div class="w-100 position-absolute d-flex flex-column justify-content-end h-100 align-items-center">
                                 <a href="{{route('announcement.show',compact('announcement'))}}" class="h-100 w-100"></a>
                             </div>

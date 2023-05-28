@@ -1,4 +1,4 @@
-<x-layout title="{{$announcement->title}}">
+<x-layout title="{{$announcement->title}}" header="{{$announcement->title}}">
     <div class="container my-2">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 mt-5">
