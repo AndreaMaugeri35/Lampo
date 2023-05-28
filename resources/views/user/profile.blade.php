@@ -2,7 +2,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             
-                @forelse (Auth::user()->announcements as $announcement)
+                @forelse (Auth::user()->announcements->where('is_accepted', true) as $announcement)
                 <div class="col-12 col-md-3 my-5">
                     <div class="card">
                         <img src="https://picsum.photos/200" class="card-img-top" alt="...">
