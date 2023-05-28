@@ -22,15 +22,15 @@ return new class extends Migration
         });
         $categories=[
             'Televisori',
-            'Informatica',
+            'Componentistica',
             'Telefonia',
-            'Arredamento',
-            'Abbigliamento',
+            'Audio',
+            'Dispositivi Portatili',
             'Film',
             'Videogiochi',
             'Fotografia',
             'Musica',
-            'Automobili',
+            'Accessori',
            
         ];
         foreach ($categories as $category) {

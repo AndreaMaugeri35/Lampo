@@ -13,7 +13,7 @@
                               <p class="card-title fw-bold">{{$announcement->category->name}}</p>
                               <p class="card-text">{{$announcement->price}} €</p>
                               <a href="{{route('announcement.show',compact('announcement'))}}" class="mb-1 btn btn-primary">Maggiori dettagli</a>
-                              <p class="card-footer">Pubblicato il :{{$announcement->created_at->format('d/m/Y')}} - Da: <a class="btn btnprimaryC "  href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement->user->name ?? ''}}</a> </p>
+                              <p class="card-footer">Pubblicato il :{{$announcement->created_at->format('d/m/Y')}} - Da: <a class="btn"  href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement->user->name ?? ''}}</a> </p>
                             </div>
                         </div>
                     </div>

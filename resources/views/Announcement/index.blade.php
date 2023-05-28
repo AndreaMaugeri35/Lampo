@@ -12,9 +12,9 @@
                     <div class="card-body">
                       <h5 class="card-title">{{$announcement->title}}</h5>
                       <p class="card-text">{{$announcement->price}} €</p>
-                      <a href="{{route('announcement.show',compact('announcement'))}}" class="btn  ">Maggiori dettagli</a>
+                      <a href="{{route('announcement.show',compact('announcement'))}}" class="btn">Maggiori dettagli</a>
                       <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class=" my-1 btn btn-primary btnCategory text-white">Categoria: {{$announcement->category->name}}</a>
-                      <p class="card-footer">Pubblicato il :{{$announcement->created_at->format('d/m/Y')}} - Da: <a class="btn btnprimaryC " href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement->user->name ?? ''}}</a> </p>
+                      <p class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}} - Da: <a class="btn" href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement->user->name ?? ''}}</a> </p>
                     </div>
                   </div>
                 </div>
