@@ -6,9 +6,8 @@
     --blacky: #222323;
     --whitey: #ECEBE5;
 
-    font-family: 'DM Mono', monospace;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Inter';
+    
 
 }
 
@@ -21,7 +20,7 @@ body{
     background-image: url('/public/media/bgfinalproject.jpg');
     background-size: cover;
     /* background-attachment: fixed; */
-    font-family: 'DM Mono';
+    font-family: 'Inter';
     
 }
 .seitu{
@@ -198,6 +197,8 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
     transform : scale(1.6);
     margin-left: 110px;
     padding-bottom: 10px;
+    
+    
 }
 
 .home{

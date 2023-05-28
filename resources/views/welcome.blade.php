@@ -10,7 +10,7 @@
                     <button id="btn" class="btn btnCategory">Pubblica annuncio</button>
                 </div>
             </div>
-            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center"><img class="img-fluid pngheader" src="/media/header.png" alt=""></div>
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center"><img class="img-fluid pngheader" src="/media/header2.png" alt=""></div>
         </div>
   </div>
 
