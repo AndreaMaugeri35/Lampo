@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-12 text-light p-5">
                 <h1 class=" display-2 text-center text-white">
-                    {{$announcement_to_check ? 'Annuncio da revisionare' : 'Non ci sono Annunci da revisionare'}}
+                    {{-- {{$announcement_to_check ? "{{__('ui.revisor')}}" : "{{__('ui.noRev')}}"}} --}}
                 </h1>
             </div>
         </div>
@@ -26,7 +26,7 @@
                   <p class="card-text">{{$announcement_to_check->price}} €</p>
                   <p class="card-text">{{$announcement_to_check->body}}</p>
                   <p class="card-text">{{$announcement_to_check->category->name}}</p>
-                  <p class="card-text">Creato da <a class="btn" href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement_to_check->user->name}}</a></p>
+                  <p class="card-text">{{__('ui.createFrom')}}<a class="btn" href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement_to_check->user->name}}</a></p>
                 </div>
             </div>
             
@@ -36,13 +36,13 @@
                 <form action="{{route('revisor.accept_announcement', ['announcement' => $announcement_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                    <button type="submit" class="btn btn-success">Accetta</button>
+                    <button type="submit" class="btn btn-success">{{__('ui.accept')}}</button>
                 </form>
 
                 <form action="{{route('revisor.reject_announcement', ['announcement' => $announcement_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                    <button type="submit" class="btn btn-danger mx-5">Rifiuta</button>
+                    <button type="submit" class="btn btn-danger mx-5">{{__('ui.reject')}}</button>
                 </form>
             </div>
 
@@ -58,7 +58,7 @@
                 <form action="{{ route('revisor.rollbackTransaction') }}" method="POST">
                     @csrf
                     @method('PATCH')
-                    <button class="btn btnCategory text-white mt-5 mb-5" type="submit">Annulla ultima operazione</button>
+                    <button class="btn btnCategory text-white mt-5 mb-5" type="submit">{{__('ui.undo')}}</button>
                 </form>
             </div>
         </div>

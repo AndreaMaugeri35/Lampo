@@ -32,8 +32,8 @@
       @auth
         @if (!Auth::user()->is_revisor)
           <section class="mb-4">
-            <p>Lavora con noi: 
-              <a class="btn btnCategory text-white" href="{{ route('become.revisor') }}">Diventa revisore</a>
+            <p>{{__('ui.work')}}: 
+              <a class="btn btnCategory text-white" href="{{ route('become.revisor') }}">{{__('ui.becomeRevisor')}}</a>
             </p>
           </section>
         @endif 

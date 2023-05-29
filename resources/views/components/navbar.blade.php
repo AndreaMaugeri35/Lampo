@@ -10,15 +10,15 @@
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           
           <li class="nav-item @if(Route::is('homepage')) d-none @endif">
-            <a class="nav-link mx-2 @if(Route::is('announcement.create')) activeNav @else btn-link @endif" href="{{route('announcement.create')}}">Inserisci un annuncio</a>
+            <a class="nav-link mx-2 @if(Route::is('announcement.create')) activeNav @else btn-link @endif" href="{{route('announcement.create')}}">{{__('ui.create')}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 @if(Route::is('announcement.index')) activeNav @else btn-link @endif" href="{{route('announcement.index')}}">Tutti gli annunci</a>
+            <a class="nav-link mx-2 @if(Route::is('announcement.index')) activeNav @else btn-link @endif" href="{{route('announcement.index')}}">{{__('ui.allAnnounce')}}</a>
           </li>
           
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle mx-2 @if(Route::is('categoryShow')) activeNav @else btn-link @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Categorie
+              {{__('ui.categories')}}
             </a>
             <ul class="dropdown-menu background-accentC">
               @foreach ($categories as $category)
@@ -40,7 +40,7 @@
               </a>
               @auth
             <ul class="dropdown-menu background-accentC">
-              <li><a class="dropdown-item text-white" href="{{route('user.profile')}}">Profilo di {{Auth::user()->name}}</a></li>
+              <li><a class="dropdown-item text-white" href="{{route('user.profile')}}">{{__('ui.profileName')}} {{Auth::user()->name}}</a></li>
               <li><hr class="dropdown-divider"></li>
               <li>
                 <a class="dropdown-item text-white" href="#" onclick="event.preventDefault();document.querySelector('#form-logout').submit();">Logout</a>
@@ -48,8 +48,8 @@
                 <form id="form-logout" action="{{route('logout')}}" method="POST" class="d-none">@csrf</form>
               @else
               <ul class="dropdown-menu dropdaun background-accentC">
-                <li><a class="dropdown-item text-white" href="{{route('login')}}">Accedi</a></li>
-                <li><a class="dropdown-item text-white" href="{{route('register')}}">Registrati</a></li>
+                <li><a class="dropdown-item text-white" href="{{route('login')}}">Log In</a></li>
+                <li><a class="dropdown-item text-white" href="{{route('register')}}">{{__('ui.signIn')}}</a></li>
               @endauth
             
               </ul>
@@ -62,8 +62,8 @@
           </li>
         </ul>
         <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
-          <input name="searched" class="form-control me-2 background-blackC" type="search" placeholder="Cerca annunci" aria-label="Search">
-          <button class="btn btnCategory text-white" type="submit">Cerca</button>
+          <input name="searched" class="form-control me-2 background-blackC" type="search" placeholder="{{__('ui.searchAnnounce')}}" aria-label="Search">
+          <button class="btn btnCategory text-white" type="submit">{{__('ui.search')}}</button>
         </form>
       </div>
     </div>

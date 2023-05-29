@@ -33,5 +33,29 @@ return[
     'loginWrong' => 'Email o Password errate',
     'alreadylo' => 'Non sei ancora registrato',
     'alreadyre' => 'Sei già registrato? Fai il', 
+    'noRev' => 'Non ci sono annunci da revisionare',
+    'createFrom' => 'Creato da',
+    'accept' => 'Accetta',
+    'reject' => 'Rifiuta',
+    'undo' => 'Annulla ultima operazione',
+    'userAnnounce' => 'Ecco i tuoi annunci',
+    'usernoAnnounce' => 'Non ci sono annunci pubblicati',
+    'canc' => 'Cancella',
+    'userWaitOrReject' => 'Annunci rifiutati o in attesa di revisione',
+    'usernoWaitOrReject' => 'Nessun annuncio rifiutato o in attesa di revisione',
+    'becomeRevisor'=> 'Diventa revisore',
+    'work' => 'Lavora con noi', 
+    'allAnnounce'=>'Tutti gli annunci',
+    'categories' => 'Categorie',
+    'profileName' => 'Profilo di',
+    'search' => 'Cerca',
+    'searchAnnounce' => 'Cerca annunci',
+
+    
+
+
+
+
+
 
 ];
