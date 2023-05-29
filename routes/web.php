@@ -27,6 +27,8 @@ Route::get('/Announcement/index',[AnnouncementController::class,'index'])->name(
 
 Route::get('/profile',[UserController::class,'profile'])->middleware('auth')->name('user.profile');
 Route::get('/Announcement/show/profile/{announcement}', [AnnouncementController::class, 'showProfile'])->name('announcement.profile');
+Route::delete('/Announcement/destroy/{announcement}', [AnnouncementController::class, 'destroy'])->name('announcement.destroy');
+
 
 
 // rotte revisore

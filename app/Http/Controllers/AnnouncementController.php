@@ -62,7 +62,16 @@ class AnnouncementController extends Controller
      */
     public function destroy(Announcement $announcement)
     {
-        //
+        
+        
+            // $announcement->games()->detach($announcement->games);
+            
+    
+            $announcement->delete();
+            
+            return redirect()->back()->with('message', 'Annuncio eliminato');
+    
+        
     }
 
     public function showProfile(Announcement $announcement)

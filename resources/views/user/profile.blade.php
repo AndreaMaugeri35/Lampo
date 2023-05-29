@@ -1,4 +1,10 @@
 <x-layout title="Il tuo profilo: {{Auth::user()->name}}" header="Benvenuto nella tua area personale, {{Auth::user()->name}}">
+    @if (session()->has('message'))
+       <div class="alert alert-success text-center">
+            {{session('message')}}
+        </div>
+     @endif
+    
     <div class="container my-5">
         <div class="row justify-content-center">
                 <h2 class="text-white text-center">Annunci pubblicati</h2>
@@ -13,6 +19,14 @@
                           <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btn-primary">Maggiori dettagli</a>
                           <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="my-1 btn btn-primary btnCategory">Categoria: {{$announcement->category->name}}</a>
                           <p class="card-footer">Pubblicato il :{{$announcement->created_at->format('d/m/Y')}}</p>
+                          
+                                        
+                                        <form action="{{ROUTE('announcement.destroy',compact('announcement'))}}" method="POST">
+                                            @csrf
+                                            @method('delete')
+                                            <button type="submit" class="btn">Cancella</button>
+                                        </form>
+                                    
                         </div>
                     </div>
                 </div>
@@ -35,6 +49,11 @@
                               <p class="card-text">{{$announcement->price}} €</p>
                               <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="my-1 btn btn-primary btnCategory">Categoria: {{$announcement->category->name}}</a>
                               <p class="card-footer">@if (is_numeric($announcement->is_accepted))Rifiutato @else In attesa di revisione @endif </p>
+                              <form action="{{ROUTE('announcement.destroy',compact('announcement'))}}" method="POST">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" class="btn">Cancella</button>
+                            </form>
                             </div>
                         </div>
                     </div>
