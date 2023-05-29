@@ -12,8 +12,8 @@
                 <div class="d-flex align-items-center justify-content-center flex-column text-white">
                     <i class="fa-solid text-accentC fa-10x my-5"></i>
                     <h1 class="display-1 mt-5 glow1">LAMPO<span class="text-accentC">.it</span></h1>
-                    <h2 class="mb-5">Non lo usi? Vendilo in un <span class="fa-sharp fa-solid fa-bolt-lightning text-accentC"></span>!</h2>
-                    <a href="{{route('announcement.create')}}" class="btn btnCategory text-white my-5">Pubblica annuncio</a>
+                    <h2 class="mb-5">{{__('ui.subtitle')}} <span class="fa-sharp fa-solid fa-bolt-lightning text-accentC"></span>!</h2>
+                    <a href="{{route('announcement.create')}}" class="btn btnCategory text-white my-5">{{__('ui.createWelcome')}}</a>
                 </div>
             </div>
             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center"><img class="img-fluid pngheader" src="/media/header4.png" alt=""></div>
@@ -38,8 +38,8 @@
                         </div>
                     @empty
                         <div class="col-12 d-flex flex-column my-5 align-items-center">
-                            <h2 class="text-center text-white display-3 fw-bold">Non ci sono annunci</h2>
-                            <a href="{{route('announcement.create')}}" class="btn btnCategory text-white my-5">Pubblicane uno</a>
+                            <h2 class="text-center text-white display-3 fw-bold">{{__('ui.noAnnouncemetWelcome')}}</h2>
+                            <a href="{{route('announcement.create')}}" class="btn btnCategory text-white my-5">{{__('ui.publishWelcome')}}</a>
                         </div>
                     @endforelse
                 </div>

@@ -1,4 +1,4 @@
-<x-layout title="Revisiona annunci" header="Qualcosa da revisionare?">
+<x-layout title="Revisiona annunci" header="{{__('ui.revisor')}}">
     @if (session()->has('message'))
        <div class="alert alert-success text-center">
             {{session('message')}}

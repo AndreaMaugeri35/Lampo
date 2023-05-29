@@ -45,3 +45,5 @@ Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])-
 //rotte search
 
 Route::get('/ricerca/annuncio', [PublicController::class, 'searchAnnouncements'])->name('announcements.search');
+
+Route::post('/lingua{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');

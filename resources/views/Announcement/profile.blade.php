@@ -1,4 +1,4 @@
-<x-layout title="Profilo di {{$announcement->user->name}}" header="Ecco gli annunci di {{$announcement->user->name}}">
+<x-layout title="Profilo di {{$announcement->user->name}}" header="{{__('ui.profile')}} {{$announcement->user->name}}">
     <div class="container my-2">
         <div class="row justify-content-center">
           

@@ -51,8 +51,14 @@
                 <li><a class="dropdown-item text-white" href="{{route('login')}}">Accedi</a></li>
                 <li><a class="dropdown-item text-white" href="{{route('register')}}">Registrati</a></li>
               @endauth
-              
-            </ul>
+            
+              </ul>
+          </li>
+
+          <li class="nav-item">
+            <x-_locale lang="it" />
+            <x-_locale lang="en" />
+            <x-_locale lang="es" />
           </li>
         </ul>
         <form action="{{route('announcements.search')}}" method="GET" class="d-flex">

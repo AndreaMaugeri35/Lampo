@@ -1,4 +1,4 @@
-<x-layout title="Registrati" header="Benvenuto">
+<x-layout title="Registrati" header="{{__('ui.register')}}">
 
     <div class="container p-5 my-2">
         <div class="row justify-content-center">

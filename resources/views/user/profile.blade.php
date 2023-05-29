@@ -1,4 +1,4 @@
-<x-layout title="Il tuo profilo: {{Auth::user()->name}}" header="Benvenuto nella tua area personale, {{Auth::user()->name}}">
+<x-layout title="Il tuo profilo: {{Auth::user()->name}}" header="{{__('ui.userProfile')}} {{Auth::user()->name}}">
     @if (session()->has('message'))
        <div class="alert alert-success text-center">
             {{session('message')}}

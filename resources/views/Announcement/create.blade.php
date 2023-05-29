@@ -1,4 +1,4 @@
-<x-layout title="Inserisci un annuncio" header="Hai qualcosa che non usi più?">
+<x-layout title="Inserisci un annuncio" header="{{__('ui.create')}}">
 
     @livewire('announcement-create')
 

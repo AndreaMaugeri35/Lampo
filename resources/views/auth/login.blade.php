@@ -1,5 +1,5 @@
 
-<x-layout title="Login" header="Bentornato!">
+<x-layout title="Login" header="{{__('ui.login')}}">
 
     <div class="container p-5 my-2">
         <div class="row justify-content-center">
