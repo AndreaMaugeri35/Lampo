@@ -36,7 +36,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle btn-link mx-2 @if(Route::is('login')) activeNav @elseif(Route::is('register')) active  @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-user-astronaut fa-lg"></i>
-                
+                @auth {{Auth::user()->name}} @endauth
               </a>
               @auth
             <ul class="dropdown-menu background-accentC">

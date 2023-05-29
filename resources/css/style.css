@@ -197,7 +197,7 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
     transform : scale(1.6);
     margin-left: 80px;
     padding-bottom: 10px;
-    
+    overflow-y: hidden;
     
 }
 
