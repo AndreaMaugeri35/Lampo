@@ -8,7 +8,7 @@
                     
                 <form class="glass text-white text-center p-5" wire:submit.prevent="store">
 
-                    <h2 class="display-3 mb-5">{{__('ui.create')}}</h2>
+                    <h2 class="display-3 mb-5">{{__('ui.createAnnouncement')}}</h2>
 
                     @csrf
 
