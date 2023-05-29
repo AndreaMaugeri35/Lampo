@@ -35,9 +35,9 @@
                       <p class="card-title fw-bold">{{$announcement->category->name}}</p>
                       <p class="card-text">{{$announcement->body}}</p>
                       <p class="card-text">{{$announcement->price}} €</p>
-                      <p class="card-text">Pubblicato il :{{$announcement->created_at->format('d/m/Y')}} - Da: <a class="btn btnprimaryC "  href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement->user->name ?? ''}}</a> </p>
-                      <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="my-1 btn btn-primary btnCategory text-white">Categoria: {{$announcement->category->name}}</a>
-                      <a href="{{route('homepage')}}" class="btn btn-primary">Torna alla home</a>
+                      <p class="card-text">{{__('ui.indexDate')}}{{$announcement->created_at->format('d/m/Y')}} -{{__('ui.from')}} <a class="btn btnprimaryC "  href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement->user->name ?? ''}}</a> </p>
+                      <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="my-1 btn btn-primary btnCategory text-white">{{__('ui.indexCategory')}} {{$announcement->category->name}}</a>
+                      <a href="{{route('homepage')}}" class="btn btn-primary">{{__('ui.backHome')}}</a>
                     </div>
                   </div>
             </div>

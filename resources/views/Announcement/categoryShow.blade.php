@@ -12,15 +12,15 @@
                               <h5 class="card-title">{{$announcement->title}}</h5>
                               <p class="card-title fw-bold">{{$announcement->category->name}}</p>
                               <p class="card-text">{{$announcement->price}} €</p>
-                              <a href="{{route('announcement.show',compact('announcement'))}}" class="mb-1 btn btn-primary">Maggiori dettagli</a>
-                              <p class="card-footer">Pubblicato il :{{$announcement->created_at->format('d/m/Y')}} - Da: <a class="btn"  href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement->user->name ?? ''}}</a> </p>
+                              <a href="{{route('announcement.show',compact('announcement'))}}" class="mb-1 btn btn-primary">{{__('ui.indexDetails')}}</a>
+                              <p class="card-footer">{{__('ui.indexDate')}}{{$announcement->created_at->format('d/m/Y')}} {{__('ui.from')}}<a class="btn"  href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement->user->name ?? ''}}</a> </p>
                             </div>
                         </div>
                     </div>
                     @empty
                         <div class="col-12 d-flex flex-column my-5 align-items-center">
-                            <h2 class="text-center text-white display-3 fw-bold">Non ci sono annunci</h2>
-                            <a href="{{route('announcement.create')}}" class="btn btnCategory text-white my-5">Pubblicane uno</a>
+                            <h2 class="text-center text-white display-3 fw-bold">{{__('ui.noAnnouncementWelcome')}}</h2>
+                            <a href="{{route('announcement.create')}}" class="btn btnCategory text-white my-5">{{__('ui.publishWelcome')}}</a>
                         </div>
                     @endforelse
 
