@@ -1,5 +1,11 @@
 <x-layout title="LAMPO.it" header="">
 
+    @if (session()->has('message'))
+         <div class="alert alert-success text-center">
+              {{session('message')}}
+         </div>
+    @endif
+
     <div class="container-fluid mt-2 seitu pb-5">
         <div class="row align-items-center justify-content-center min-vh-100">
             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center h-100">

@@ -1,4 +1,9 @@
 <x-layout title="Revisiona annunci" header="Qualcosa da revisionare?">
+    @if (session()->has('message'))
+       <div class="alert alert-success text-center">
+            {{session('message')}}
+        </div>
+     @endif
     <div class="div container p-5 mb-4">
         <div class="row">
             <div class="col-12 text-light p-5">

@@ -44,7 +44,7 @@ class RevisorController extends Controller
         {
             $announcement = Announcement::where('is_accepted', '!=', null)->get()->reverse()->first();
             $announcement->setAccepted(null);
-            return redirect()->back()->with('message', 'Complimenti! Hai accettato l\'annuncio');
+            return redirect()->back()->with('message', 'Ultima operazione annulata');
         }
 
 }    
