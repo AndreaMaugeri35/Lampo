@@ -11,7 +11,7 @@
                 @forelse (Auth::user()->announcements->where('is_accepted', true) as $announcement)
                 <div class="col-12 col-md-3 my-5">
                     <div class="card">
-                        <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                        <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path):'https://picsum.photos/200'}}" class="card-img-top" alt="...">
                         
                         <div class="card-body">
                           <h5 class="card-title">{{$announcement->title}}</h5>
@@ -42,7 +42,7 @@
                     @forelse (Auth::user()->announcements->where('is_accepted',!1) as $announcement)
                     <div class="col-12 col-md-3 my-5">
                         <div class="card">
-                            <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                            <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path):'https://picsum.photos/200'}}" class="card-img-top" alt="...">
                             
                             <div class="card-body">
                               <h5 class="card-title">{{$announcement->title}}</h5>

@@ -19,7 +19,28 @@
     {{-- @forelse ($announcement_to_check as $announcement) --}}
         <div class="col-12 col-md-6 my-3">
             <div class="card">
-                <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    @if($announcement_to_check->images)
+                    <div class="carousel-inner">
+                      @foreach($announcement_to_check->images as $image)
+                      <div class="carousel-item @if($loop->first) active @endif">
+                        <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="">
+                      </div>
+                      @endforeach
+                    </div>
+                    @else
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
+                        </div>
+                      </div>
+                      @endif
                 
                 <div class="card-body">
                   <h5 class="card-title">{{$announcement_to_check->title}}</h5>

@@ -5,18 +5,28 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Category;
 use App\Models\Announcement;
+use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 
 class AnnouncementCreate extends Component
 {
+    use WithFileUploads;
+    public $announcement;
     public $title, $body, $price;
     public $category;
+    public $images = [];
+    public $image;
+    public $temporary_images;
+    public $validated;
+    public $message;
     protected $rules=[
 
         'title'=>'required|min:4',
         'body'=>'required|min:8',
         'price'=>'required|numeric|max:999999,99',
-        'category'=>'required'
+        'category'=>'required',
+        'images.*'=>'image|max:1024',
+        'temporary_images.*'=>'image|max:1024'
 
     ];
 
@@ -26,18 +36,45 @@ class AnnouncementCreate extends Component
         'min'=> 'il campo è troppo corto',
         'numeric'=> 'il campo deve essere un numero',
         'max'=> 'prezzo max:999999,99',
+        'temporary_images.required'=> 'l\'immagine è richiesta',
+        'temporary_images.*.image'=> 'i file devono essere immagini',
+        'temporary_images.*.allegri'=> 'l\'immagine deve essere di massimo 1 MB',
+        'images.image'=> 'l\'immagine deve essere un immagine',
+        'images.max'=> 'l\'immagine deve essere di massimo 1 MB',
 
     ];
 
+    public function updatedTemporaryImages(){
+        if($this->validate([
+            'temporary_images.*' => 'image|max:1024',
+            ])){
+                foreach($this->temporary_images as $image){
+                    $this->images[] = $image;
+                }}
+    }
+
+        public function removeImage($key){
+            if(in_array($key, array_keys($this->images))){
+                unset($this->images[$key]);
+            }
+        }
+
         public function store(){
             $this->validate();
-            $category = Category::find($this->category);
-            $announcement=$category->announcements()->create([
-                'title'=>$this->title,
-                'body'=>$this->body,
-                'price'=>$this->price
-            ]);
-            Auth::user()->announcements()->save($announcement);
+            $this->announcement = Category::find($this->category)->announcements()->create($this->validate());
+            $this->announcement->user()->associate(Auth::user());
+            // $announcement=$category->announcements()->create([
+                // 'title'=>$this->title,
+                // 'body'=>$this->body,
+                // 'price'=>$this->price
+            // ]);
+            if(count($this->images)){
+                foreach($this->images as $image){
+                    $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
+                }
+            }
+            // Auth::user()->announcements()->save($announcement);
+            $this->announcement->save();
 
             session()->flash('message' , 'Hai inserito un annuncio con successo');
             $this->reset();
