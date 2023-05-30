@@ -40,7 +40,7 @@ class AnnouncementCreate extends Component
         'max'=> 'prezzo max:999999,99',
         'temporary_images.required.*'=> 'l\'immagine è richiesta',
         'temporary_images.*.image'=> 'i file devono essere immagini',
-        'temporary_images.*.allegri'=> 'l\'immagine deve essere di massimo 1 MB',
+        'temporary_images.*.max'=> 'l\'immagine deve essere di massimo 1 MB',
         'images.image'=> 'l\'immagine deve essere un immagine',
         'images.max'=> 'l\'immagine deve essere di massimo 1 MB',
 
@@ -78,11 +78,9 @@ class AnnouncementCreate extends Component
                     dispatch(new ResizeImage($newImage->path,300,200));
                 }
                 File::deleteDirectory(storage_path('/app/livewire-tmp'));
-                
             }
-
-            $this->announcement->save();
             // Auth::user()->announcements()->save($announcement);
+            $this->announcement->save();
 
             session()->flash('message' , 'Hai inserito un annuncio con successo');
             $this->reset();

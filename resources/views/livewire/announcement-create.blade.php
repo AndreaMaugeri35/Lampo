@@ -36,12 +36,13 @@
                     </div>
                     <div class="mb-3">
                         <label for="category" class="form-label">{{__('ui.indexCategory')}}</label>
-                        <select class="form-select @error('category') is-invalid @enderror" wire:model.defer="category" id="category"> @error('category'){{$message}} @enderror
+                        <select class="form-select @error('category') is-invalid @enderror" wire:model.defer="category" id="category">
                             <option value="" selected>{{__('ui.createCategory')}}</option>
                             @foreach ($categories as $category)
                             <option value="{{$category->id}}">{{$category->name}}</option>
                             @endforeach
                             </select>
+                            @error('category'){{$message}} @enderror
                     </div>
                     <div class="mb-3">
                         <input type="file" wire:model="temporary_images" name="images" multiple class="form-control @error('temporary_images.*') is-invalid @enderror" placeholder="Img" /> @error('temporary_images.*'){{$message}} @enderror

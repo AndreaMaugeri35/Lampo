@@ -9,7 +9,7 @@
             <div class="col-12 text-light p-5">
                 <h1 class=" display-2 text-center text-white">
                     {{-- {{$announcement_to_check ? '{{__("ui.revisor")}}' : '{{__("ui.noRev")}}'}} --}}
-                    @if($announcement_to_check)  @else Non ci sono annunci da revisionare @endif
+                    @if($announcement_to_check) {{__('ui.revisor')}}  @else {{__('ui.noRev')}} @endif
                 </h1>
             </div>
         </div>
@@ -21,27 +21,37 @@
         <div class="col-12 col-md-6 my-3">
             <div class="card">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    @if($announcement_to_check->images)
-                    <div class="carousel-inner">
-                      @foreach($announcement_to_check->images as $image)
-                      <div class="carousel-item @if($loop->first) active @endif">
-                        <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="">
-                      </div>
-                      @endforeach
-                    </div>
-                    @else
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        @if($announcement_to_check->images)
+                        <div class="carousel-inner">
+                          @foreach($announcement_to_check->images as $image)
+                          <div class="carousel-item lui  @if($loop->first) active @endif">
+                          <div class="d-flex align-items-center h-100 justify-content-center"><img src="{{Storage::url($image->path)}}" class=" lei p-3 rounded" alt=""></div> 
+                          </div>
+                          @endforeach
                         </div>
-                        <div class="carousel-item">
-                          <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
+                        @else
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
+                            </div>
+                          </div>
+                          @endif
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
                         </div>
-                        <div class="carousel-item">
-                          <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
-                        </div>
-                      </div>
-                      @endif
                 
                 <div class="card-body">
                   <h5 class="card-title">{{$announcement_to_check->title}}</h5>

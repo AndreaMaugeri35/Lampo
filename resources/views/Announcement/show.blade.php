@@ -9,8 +9,8 @@
                       @if($announcement->images)
                       <div class="carousel-inner">
                         @foreach($announcement->images as $image)
-                        <div class="carousel-item @if($loop->first) active @endif">
-                          <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="">
+                        <div class="carousel-item lui  @if($loop->first) active @endif">
+                        <div class="d-flex align-items-center h-100 justify-content-center"><img src="{{Storage::url($image->path)}}" class=" lei p-3 rounded" alt=""></div> 
                         </div>
                         @endforeach
                       </div>
