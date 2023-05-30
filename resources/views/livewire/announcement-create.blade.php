@@ -36,7 +36,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="category" class="form-label">{{__('ui.indexCategory')}}</label>
-                        <select class="form-select" wire:model.defer="category" id="category">
+                        <select class="form-select @error('category') is-invalid @enderror" wire:model.defer="category" id="category"> @error('category'){{$message}} @enderror
                             <option value="" selected>{{__('ui.createCategory')}}</option>
                             @foreach ($categories as $category)
                             <option value="{{$category->id}}">{{$category->name}}</option>

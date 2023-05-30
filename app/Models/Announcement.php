@@ -20,6 +20,7 @@ class Announcement extends Model
        'title',
        'body',
        'price',
+       
 
     ];
 

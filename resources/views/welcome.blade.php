@@ -6,14 +6,6 @@
          </div>
     @endif
 
-    <section class="container-fluid">
-        <div class="row py-5">
-          <div class="col-12 py-5 d-flex justify-content-center align-items-center">
-            <video id="video1" class="videocustom cursordefault" muted autoplay playsinline preload="auto" loop src="/media/header.mp4">Il video non può essere riprodotto sul tuo browser.</video>     
-          </div>
-        </div>
-      </section>
-
     <div class="container-fluid mt-2 seitu pb-5">
         <div class="row align-items-center justify-content-center min-vh-100">
             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center h-100">

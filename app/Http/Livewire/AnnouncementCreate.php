@@ -27,7 +27,7 @@ class AnnouncementCreate extends Component
         'body'=>'required|min:8',
         'price'=>'required|numeric|max:999999,99',
         'category'=>'required',
-        'images.*'=>'image|max:1024',
+        'images.'=>'image|max:1024',
         'temporary_images.*'=>'image|max:1024'
 
     ];
@@ -38,7 +38,7 @@ class AnnouncementCreate extends Component
         'min'=> 'il campo è troppo corto',
         'numeric'=> 'il campo deve essere un numero',
         'max'=> 'prezzo max:999999,99',
-        'temporary_images.required'=> 'l\'immagine è richiesta',
+        'temporary_images.required.*'=> 'l\'immagine è richiesta',
         'temporary_images.*.image'=> 'i file devono essere immagini',
         'temporary_images.*.allegri'=> 'l\'immagine deve essere di massimo 1 MB',
         'images.image'=> 'l\'immagine deve essere un immagine',
@@ -78,8 +78,10 @@ class AnnouncementCreate extends Component
                     dispatch(new ResizeImage($newImage->path,300,200));
                 }
                 File::deleteDirectory(storage_path('/app/livewire-tmp'));
-                $this->announcement->save();
+                
             }
+
+            $this->announcement->save();
             // Auth::user()->announcements()->save($announcement);
 
             session()->flash('message' , 'Hai inserito un annuncio con successo');
