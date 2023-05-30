@@ -30,12 +30,12 @@
 
   <div class="container my-5">
     <div class="row justify-content-center">
-        <div class="col-12">
+        <div class="col-12 col-md-6">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     @forelse($announcements as $announcement)
                         <div class="swiper-slide position-relative flex-column d-flex align-items-center">
-                            <img class="w-100 mySwiper1" src="https://picsum.photos/300/200" alt="">
+                            <img class="w-100 mySwiper1" src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,200) : 'https://picsum.photos/200'}}" alt="">
                             <div class="w-100 position-absolute d-flex flex-column justify-content-end h-100 align-items-center">
                                 <a href="{{route('announcement.show',compact('announcement'))}}" class="h-100 w-100"></a>
                             </div>
@@ -46,7 +46,7 @@
                         </div>
                     @empty
                         <div class="col-12 d-flex flex-column my-5 align-items-center">
-                            <h2 class="text-center text-white display-3 fw-bold">{{__('ui.noAnnouncemetWelcome')}}</h2>
+                            <h2 class="text-center text-white display-3 fw-bold">{{__('ui.noAnnouncementWelcome')}}</h2>
                             <a href="{{route('announcement.create')}}" class="btn btnCategory text-white my-5">{{__('ui.publishWelcome')}}</a>
                         </div>
                     @endforelse

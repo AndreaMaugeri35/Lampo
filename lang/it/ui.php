@@ -20,7 +20,7 @@ return[
     'indexCategory' => 'Categoria: ',
     'backHome' => 'Torna alla home',
     'from' => 'Da',
-    'create' => 'Inserisci il tuo annuncio',
+    'createAnnouncement' => 'Inserisci il tuo annuncio',
     'createTitle' => 'Titolo annuncio',
     'createPrice' => 'Prezzo',
     'createDescription' => 'Descrizione',
@@ -50,6 +50,8 @@ return[
     'profileName' => 'Profilo di',
     'search' => 'Cerca',
     'searchAnnounce' => 'Cerca annunci',
+    'userReject'=> 'Rifiutato',
+    'userWait'=> 'In attesa di revisione',
 
     
 

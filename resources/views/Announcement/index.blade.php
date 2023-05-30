@@ -7,14 +7,14 @@
             @forelse ($announcements as $announcement)
             <div class="col-12 col-md-3 my-5">
                 <div class="card">
-                    <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                    <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path):'https://picsum.photos/200'}}" class="card-img-top" alt="...">
                     
                     <div class="card-body">
                       <h5 class="card-title">{{$announcement->title}}</h5>
                       <p class="card-text">{{$announcement->price}} €</p>
                       <a href="{{route('announcement.show',compact('announcement'))}}" class="btn">{{__('ui.indexDetails')}}</a>
                       <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class=" my-1 btn btn-primary btnCategory text-white">{{__('ui.indexCategory')}} {{$announcement->category->name}}</a>
-                      <p class="card-footer">{{__('ui.indexDate')}} {{$announcement->created_at->format('d/m/Y')}} - Da: <a class="btn" href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement->user->name ?? ''}}</a> </p>
+                      <p class="card-footer">{{__('ui.indexDate')}} {{$announcement->created_at->format('d/m/Y')}} - {{__('ui.from')}}<a class="btn" href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement->user->name ?? ''}}</a> </p>
                     </div>
                   </div>
                 </div>

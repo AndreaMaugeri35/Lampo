@@ -264,4 +264,10 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
     }
   }
 
+  .img-preview{
+    width: 160px;
+    height: 90px;
+    background-size: contain;
+  }
+
 
