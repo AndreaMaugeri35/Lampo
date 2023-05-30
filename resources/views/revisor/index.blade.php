@@ -8,7 +8,8 @@
         <div class="row">
             <div class="col-12 text-light p-5">
                 <h1 class=" display-2 text-center text-white">
-                    {{-- {{$announcement_to_check ? "{{__('ui.revisor')}}" : "{{__('ui.noRev')}}"}} --}}
+                    {{-- {{$announcement_to_check ? '{{__("ui.revisor")}}' : '{{__("ui.noRev")}}'}} --}}
+                    @if($announcement_to_check)  @else Non ci sono annunci da revisionare @endif
                 </h1>
             </div>
         </div>
@@ -47,7 +48,7 @@
                   <p class="card-text">{{$announcement_to_check->price}} €</p>
                   <p class="card-text">{{$announcement_to_check->body}}</p>
                   <p class="card-text">{{$announcement_to_check->category->name}}</p>
-                  <p class="card-text">{{__('ui.createFrom')}}<a class="btn" href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement_to_check->user->name}}</a></p>
+                  <p class="card-text">{{__('ui.from')}}<a class="btn" href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement_to_check->user->name}}</a></p>
                 </div>
             </div>
             

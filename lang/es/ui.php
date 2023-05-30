@@ -50,6 +50,8 @@ return[
     'profileName' => 'Profil de',
     'search' => 'Busca',
     'searchAnnounce' => 'Busca anuncios',
+    'userReject'=> 'Rechazado',
+    'userWait'=> 'pendiente de revisión',
 
     
 

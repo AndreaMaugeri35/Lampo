@@ -50,6 +50,8 @@ return[
     'profileName' => 'Profile of',
     'search' => 'Search',
     'searchAnnounce' => 'Search announcement',
+    'userReject'=> 'Rejected',
+    'userWait'=> 'Waiting for check',
 
     
 ];
