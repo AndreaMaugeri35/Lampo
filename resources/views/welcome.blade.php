@@ -12,7 +12,7 @@
                 <div class="d-flex align-items-center justify-content-center flex-column text-white">
                     <i class="fa-solid text-accentC fa-10x my-5"></i>
                     <h1 class="display-1 mt-5 glow1">LAMPO<span class="text-accentC">.it</span></h1>
-                    <h2 class="mb-5">{{__('ui.subtitle')}} <span class="fa-sharp fa-solid fa-bolt-lightning text-accentC"></span>!</h2>
+                    <h2 class="mb-5">{{__('ui.subtitle')}} <span> <img src="/media/logo.png" class="logo2 pb-2" alt=""></span></h2>
                     <a href="{{route('announcement.create')}}" class="btn btnCategory text-white my-5">{{__('ui.createWelcome')}}</a>
                 </div>
             </div>

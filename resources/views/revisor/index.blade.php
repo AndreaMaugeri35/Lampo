@@ -16,7 +16,7 @@
     </div>
     @if($announcement_to_check)
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
     {{-- @forelse ($announcement_to_check as $announcement) --}}
         <div class="col-12 col-md-6 my-3">
             <div class="card">

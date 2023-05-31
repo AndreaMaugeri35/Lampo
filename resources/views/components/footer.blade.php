@@ -21,7 +21,13 @@
     </section>
     <!-- Section: Social media -->
 
+    <section class="mb-2">
+      <!-- Facebook -->
+      <img src="/media/logo.png" class="logo2 pb-2" alt="">
 
+      <a class="text-white btn btnCategory" href="#">About us</a>
+
+    </section>
 
 
   </div>

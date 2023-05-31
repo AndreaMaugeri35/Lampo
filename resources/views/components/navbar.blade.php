@@ -1,7 +1,7 @@
 <nav class="navbar nav navbar-expand-lg  fixed-top fs-7" id="navbar">
     <div class="container-fluid">
-      <a class="navbar-brand mx-0" href="{{route('homepage')}}"><i class="fa-sharp fa-solid fa-bolt-lightning home fa-2x text-white"></i>
-        <a class="nav-link mx-0 home1 @if(Route::is('homepage')) d-none @else btn-link @endif" aria-current="page" href="{{route('homepage')}}">Home</a>
+      <a class="navbar-brand mx-0" href="{{route('homepage')}}"><img src="/media/logo.png" class="logo" alt="">
+        <a class="nav-link mx-0 home1 glow2 @if(Route::is('homepage')) d-none @else btn-link @endif" aria-current="page"  href="{{route('homepage')}}">Home</a>
       </a>
       <button id="bottone" class="navbar-toggler btnCategory" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

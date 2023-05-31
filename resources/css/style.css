@@ -14,6 +14,11 @@
 .logo{
     width: 100px;
    
+   animation: glow 1s alternate infinite;
+}
+
+.logo2{
+    width: 50px;
 }
 
 body{
@@ -255,6 +260,16 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
     animation: glow1 1s ease-in-out infinite alternate;
   }
   
+  .glow2 {
+
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow1 1s ease-in-out infinite alternate;
+    -moz-animation: glow1 1s ease-in-out infinite alternate;
+    animation: glow1 1s ease-in-out infinite alternate;
+  }
+  
+
   @-webkit-keyframes glow1 {
     from {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #A238FF, 0 0 40px #A238FF, 0 0 50px #A238FF, 0 0 60px #A238FF, 0 0 70px #A238FF;
@@ -276,3 +291,12 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
 .lei{
     height: 100%;
 }
+
+
+.btn-success:hover{
+    background-color: green !important;
+}
+.btn-danger:hover{
+    background-color: red !important;
+}
+
