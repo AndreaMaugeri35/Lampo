@@ -30,6 +30,26 @@
                           </div>
                           @endforeach
                         </div>
+                        @foreach($announcement_to_check->images as $image)
+                            <div class="w-50 p-5 pb-0">
+                                <h5 class="text-white">Revisione immagini</h5>
+                                <p class="text-white">Adult: <span class="{{ $image->adult }}"></span></p>
+                                <p class="text-white">Medical: <span class="{{ $image->medical }}"></span></p>
+                                <p class="text-white">Spoof: <span class="{{ $image->spoof }}"></span></p>
+                                <p class="text-white">Violence: <span class="{{ $image->violence }}"></span></p>
+                                <p class="text-white">Racy: <span class="{{ $image->racy }}"></span></p>
+                            </div>
+                            <div class="w-50 p-5 pt-0">
+                                <h5 class="text-white mt-3">Tags</h5>
+                                <div class="p2">
+                                    @if($image->labels)
+                                        @foreach($image->labels as $label)
+                                            <p class="d-inline text-white">{{ $label }}, </p>
+                                        @endforeach
+                                    @endif
+                                </div>
+                            </div>
+                        @endforeach
                         @else
                           <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -58,7 +78,7 @@
                   <p class="card-text">{{$announcement_to_check->price}} €</p>
                   <p class="card-text">{{$announcement_to_check->body}}</p>
                   <p class="card-text">{{$announcement_to_check->category->name}}</p>
-                  <p class="card-text">{{__('ui.from')}}<a class="btn" href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement_to_check->user->name}}</a></p>
+                  <p class="card-text">{{__('ui.from')}}<a class="btn" href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement_to_check->user->name ?? 'annuncio da rifiutare'}}</a></p>
                 </div>
             </div>
             
