@@ -10,7 +10,7 @@
                       <div class="carousel-inner">
                         @foreach($announcement->images as $image)
                         <div class="carousel-item lui  @if($loop->first) active @endif">
-                        <div class="d-flex align-items-center h-100 justify-content-center"><img src="{{Storage::url($image->path)}}" class=" lei p-3 rounded" alt=""></div> 
+                        <div class="d-flex align-items-center h-100 justify-content-center"><img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrlwater('logo') : 'https://picsum.photos/200'}}" class=" lei p-3 rounded" alt=""></div> 
                         </div>
                         @endforeach
                       </div>

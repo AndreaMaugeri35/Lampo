@@ -28,8 +28,21 @@ class Image extends Model
         return Storage::url($file);
     }
 
+    public static function getUrlByFilePathwater($filePath,$water=null){
+        if(!$water){
+            return Storage::url($filePath);
+        }
+        $path=dirname($filePath);
+        $fileName=basename($filePath);
+        $file="{$path}/logo{$fileName}";
+        return Storage::url($file);
+    }
+
     public function getUrl($w=null,$h=null){
         return Image::getUrlByFilePath($this->path,$w,$h);
+    }
+    public function getUrlwater($water=null){
+        return Image::getUrlByFilePathwater($this->path,$water);
     }
 }
 
