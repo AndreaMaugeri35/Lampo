@@ -46,3 +46,15 @@ var swiper = new Swiper(".mySwiper", {
 
 
 
+// carosello di prova
+
+
+const hamburger_menu = document.querySelector(".hamburger-menu");
+const container = document.querySelector(".container1");
+
+hamburger_menu.addEventListener("click", () => {
+  container.classList.toggle("active");
+});
+
+
+

@@ -75,4 +75,67 @@
     {{-- fine carosello --}}
 </div>
 
+
+
+            <div class="container1">
+      <div class="navbar1">
+        <div class="menu">
+          <h3 class="logonew">Brand<span>Name</span></h3>
+          <div class="hamburger-menu">
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-container">
+        <div class="main">
+          <header>
+            <div class="overlay">
+              <div class="inner">
+                <h2 class="title">Future is here</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laudantium illum tenetur consequatur veritatis?
+                </p>
+                <button class="btnnew">Read more</button>
+              </div>
+            </div>
+          </header>
+        </div>
+
+        <div class="shadow1 one"></div>
+        <div class="shadow1 two"></div>
+      </div>
+
+      <div class="links1">
+        <ul>
+          <li>
+            <a href="#" style="--i: 0.05s;">Home</a>
+          </li>
+          <li>
+            <a href="#" style="--i: 0.1s;">Services</a>
+          </li>
+          <li>
+            <a href="#" style="--i: 0.15s;">Portfolio</a>
+          </li>
+          <li>
+            <a href="#" style="--i: 0.2s;">Testimonials</a>
+          </li>
+          <li>
+            <a href="#" style="--i: 0.25s;">About</a>
+          </li>
+          <li>
+            <a href="#" style="--i: 0.3s;">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
 </x-layout>
