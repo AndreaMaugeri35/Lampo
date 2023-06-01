@@ -47,7 +47,7 @@
                             <div class="card-body">
                               <h5 class="card-title">{{$announcement->title}}</h5>
                               <p class="card-text">{{$announcement->price}} €</p>
-                              <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="my-1 btn btn-primary btnCategory">{{__('ui.indexCategory')}} {{$announcement->category->name}}</a>
+                              <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="my-1 btn btn-primary btnCategory">{{__('ui.indexCategory')}} {{__('ui.categories'. $announcement->category->id)}}</a>
                               <p class="card-footer">@if (is_numeric($announcement->is_accepted)){{__('ui.userReject')}} @else {{__('ui.userWait')}} @endif </p>
                               <form action="{{ROUTE('announcement.destroy',compact('announcement'))}}" method="POST">
                                 @csrf

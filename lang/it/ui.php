@@ -52,6 +52,16 @@ return[
     'searchAnnounce' => 'Cerca annunci',
     'userReject'=> 'Rifiutato',
     'userWait'=> 'In attesa di revisione',
+    'categories1' => 'Televisori',
+    'categories2' => 'Componentistica',
+    'categories3' => 'Telefonia',
+    'categories4' => 'Audio',
+    'categories5' => 'Dispositivi Portatili',
+    'categories6' => 'Film',
+    'categories7' => 'Videogiochi',
+    'categories8' => 'Fotografia',
+    'categories9' => 'Musica',
+    'categories10' => 'Accesori',
 
     
 

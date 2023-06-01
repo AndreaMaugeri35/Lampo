@@ -39,7 +39,7 @@
                         <select class="form-select @error('category') is-invalid @enderror" wire:model.defer="category" id="category">
                             <option value="" selected>{{__('ui.createCategory')}}</option>
                             @foreach ($categories as $category)
-                            <option value="{{$category->id}}">{{$category->name}}</option>
+                            <option value="{{$category->id}}">{{__('ui.categories'. $category->id)}}</option>
                             @endforeach
                             </select>
                             @error('category'){{$message}} @enderror

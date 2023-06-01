@@ -52,6 +52,16 @@ return[
     'searchAnnounce' => 'Busca anuncios',
     'userReject'=> 'Rechazado',
     'userWait'=> 'pendiente de revisión',
+    'categories1' => 'Tv',
+    'categories2' => 'Components',
+    'categories3' => 'Mobile',
+    'categories4' => 'Audio',
+    'categories5' => 'Devices',
+    'categories6' => 'Movies',
+    'categories7' => 'Videogames',
+    'categories8' => 'Photography',
+    'categories9' => 'Music',
+    'categories10' => 'Accesories',
 
     
 

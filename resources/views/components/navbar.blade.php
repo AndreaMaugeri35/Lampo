@@ -22,8 +22,15 @@
             </a>
             <ul class="dropdown-menu background-accentC">
               @foreach ($categories as $category)
-              <li><a class="text-white dropdown-item" href="{{route('categoryShow',compact('category'))}}">{{$category->name}}</a></li>
-                  
+                @if(App::isLocale('it'))
+
+                  <li><a class="text-white dropdown-item" href="{{route('categoryShow',compact('category'))}}">{{$category->name}}</a></li>
+
+                @else
+
+                  <li><a class="text-white dropdown-item" href="{{route('categoryShow',compact('category'))}}">{{__('ui.categories'. $category->id)}}</a></li>
+                
+                @endif  
               @endforeach
             </ul>
             @auth

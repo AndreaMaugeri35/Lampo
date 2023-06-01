@@ -77,7 +77,7 @@
                   <h5 class="card-title">{{$announcement_to_check->title}}</h5>
                   <p class="card-text">{{$announcement_to_check->price}} €</p>
                   <p class="card-text">{{$announcement_to_check->body}}</p>
-                  <p class="card-text">{{$announcement_to_check->category->name}}</p>
+                  <p class="card-text">{{__('ui.categories'. $announcement_to_check->category->id)}}</p>
                   <p class="card-text">{{__('ui.from')}}<a class="btn" href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement_to_check->user->name ?? 'annuncio da rifiutare'}}</a></p>
                 </div>
             </div>
