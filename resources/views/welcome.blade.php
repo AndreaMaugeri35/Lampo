@@ -87,46 +87,62 @@
         </div>
       </div>
 
-      <div class="main-container">
-        <div class="main">
+      <div class="main-container ">
+        <div class="main bg-transparent">
           <header>
-            <div class="overlay">
+            <div  class="overlay">
               <div class="inner">
-                <h2 class="title">Future is here</h2>
+                <h2 class="title">{{$announcements[0]->title}}</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laudantium illum tenetur consequatur veritatis?
+                    {{$announcements[0]->body}}
                 </p>
-                <button class="btnnew">Read more</button>
+                <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btnCategory text-white my-5">Vai all'annuncio</a>
               </div>
+              
+              <img src="{{!$announcements[0]->images()->get()->isEmpty() ? $announcements[0]->images()->first()->getUrlwater('logo') : 'https://picsum.photos/200'}}" class="lei2 p-3 rounded" alt="">
             </div>
           </header>
         </div>
 
-        <div class="shadow1 one"></div>
-        <div class="shadow1 two"></div>
+
+        {{-- @dd($announcements[1]) --}}
+
+        <div class="shadow1 one">
+            <div class="overlay">
+                <div class="inner">
+                  <h2 class="title">{{$announcements[2]->title}}</h2>
+                  <p>
+                      {{$announcements[2]->body}}
+                  </p>
+                  <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btnCategory text-white my-5">Vai all'annuncio</a>
+                </div>
+                
+                <img src="{{!$announcements[2]->images()->get()->isEmpty() ? $announcements[2]->images()->first()->getUrlwater('logo') : 'https://picsum.photos/200'}}" class="lei2 p-3 rounded" alt="">
+              </div>
+        </div>
+        <div class="shadow1 two">
+            <div class="overlay">
+                <div class="inner">
+                  <h2 class="title">{{$announcements[3]->title}}</h2>
+                  <p>
+                      {{$announcements[3]->body}}
+                  </p>
+                  <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btnCategory text-white my-5">Vai all'annuncio</a>
+                </div>
+                
+                <img src="{{!$announcements[3]->images()->get()->isEmpty() ? $announcements[3]->images()->first()->getUrlwater('logo') : 'https://picsum.photos/200'}}" class="lei2 p-3 rounded" alt="">
+              </div>
+        </div>
       </div>
 
       <div class="links1">
         <ul>
-          <li>
-            <a href="#" style="--i: 0.05s;">Home</a>
-          </li>
-          <li>
-            <a href="#" style="--i: 0.1s;">Services</a>
-          </li>
-          <li>
-            <a href="#" style="--i: 0.15s;">Portfolio</a>
-          </li>
-          <li>
-            <a href="#" style="--i: 0.2s;">Testimonials</a>
-          </li>
-          <li>
-            <a href="#" style="--i: 0.25s;">About</a>
-          </li>
-          <li>
-            <a href="#" style="--i: 0.3s;">Contact</a>
-          </li>
+            {{-- @forelse($announcements as $announcement) --}}
+            <li>
+                <a  href="#" style="--i: 0.3s;">{{$announcements[3]->title}}}</a>
+            </li>
+            {{-- @empty
+            @endforelse --}}
         </ul>
       </div>
     </div>

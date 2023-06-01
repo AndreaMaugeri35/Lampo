@@ -56,5 +56,3 @@ hamburger_menu.addEventListener("click", () => {
   container.classList.toggle("active");
 });
 
-
-
