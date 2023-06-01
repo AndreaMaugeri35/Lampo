@@ -40,7 +40,7 @@ return[
     'undo' => 'Undo the last operation',
     'userAnnounce' => 'Your announcement',
     'usernoAnnounce' => 'There are no posted announcement',
-    'canc' => 'Delet',
+    'canc' => 'Delete',
     'userWaitOrReject' => 'Announcement rejected or revision checking',
     'usernoWaitOrReject' => 'No announcement rejected or revision checking',
     'becomeRevisor'=> 'Become revisor',
@@ -62,6 +62,6 @@ return[
     'categories8' => 'Photography',
     'categories9' => 'Music',
     'categories10' => 'Accesories',
-
+    'about' => 'About us'
     
 ];

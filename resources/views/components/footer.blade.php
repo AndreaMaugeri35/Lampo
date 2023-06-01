@@ -25,7 +25,7 @@
       <!-- Facebook -->
       <img src="/media/logo.png" class="logo2 pb-2" alt="">
 
-      <a class="text-white btn btnCategory" href="{{ route('about')}}">About us</a>
+      <a class="text-white btn btnCategory" href="{{ route('about')}}">{{__('ui.about')}}</a>
 
     </section>
 

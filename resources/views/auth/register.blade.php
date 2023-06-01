@@ -1,6 +1,6 @@
 <x-layout title="Registrati" header="{{__('ui.register')}}">
 
-    <div class="container p-5 my-2">
+    <div data-aos="fade-down" class="container p-5 my-2">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 my-5 d-flex justify-content-center">
             <form class="p-5 text-white text-center glass" action="{{route('register')}}" method="POST">

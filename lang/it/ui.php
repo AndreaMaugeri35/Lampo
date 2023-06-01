@@ -62,7 +62,7 @@ return[
     'categories8' => 'Fotografia',
     'categories9' => 'Musica',
     'categories10' => 'Accesori',
-
+    'about' => 'Chi siamo'
     
 
 

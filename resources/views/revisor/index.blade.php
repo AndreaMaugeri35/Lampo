@@ -15,7 +15,7 @@
         </div>
     </div>
     @if($announcement_to_check)
-    <div class="container">
+    <div data-aos="fade-down" class="container">
         <div class="row justify-content-center">
     {{-- @forelse ($announcement_to_check as $announcement) --}}
         <div class="col-12 col-md-6 my-3">
