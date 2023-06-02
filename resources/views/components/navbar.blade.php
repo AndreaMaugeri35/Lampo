@@ -66,9 +66,11 @@
             <x-_locale lang="es" />
           </li>
         </ul>
-        <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
-          <input name="searched" class="form-control me-2 background-blackC" type="search" placeholder="{{__('ui.searchAnnounce')}}" aria-label="Search">
-          <button class="btn btnCategory text-white" type="submit">{{__('ui.search')}}</button>
+        <form action="{{route('announcements.search')}}" method="GET" class="d-flex form-search" >
+          <div class="box me-2">
+            <input name="searched" class="background-blackC text-white" type="search" placeholder="{{__('ui.searchAnnounce')}}" aria-label="Search">
+            <a class="text-gradient" type="submit"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
         </form>
       </div>
     </div>

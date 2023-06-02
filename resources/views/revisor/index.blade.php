@@ -1,4 +1,4 @@
-<x-layout title="Revisiona annunci" header="{{__('ui.revisor')}}">
+<x-layout title="Revisiona annunci" header="">
     @if (session()->has('message'))
        <div class="alert alert-success text-center">
             {{session('message')}}
@@ -22,11 +22,12 @@
             <div class="card">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        @if($announcement_to_check->images)
+                        @if(!$announcement_to_check->images->isEmpty())
                         <div class="carousel-inner">
                           @foreach($announcement_to_check->images as $image)
                           <div class="carousel-item lui  @if($loop->first) active @endif">
-                          <div class="d-flex align-items-center h-100 justify-content-center"><img src="{{Storage::url($image->path)}}" class=" lei p-3 rounded" alt=""></div> 
+                          <div class="d-flex align-items-center h-100 justify-content-center"><img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrlwater('logo') : 'https://picsum.photos/200'}}" alt="" class="lei p-3 rounded">
+                        </div> 
                           </div>
                           @endforeach
                         </div>

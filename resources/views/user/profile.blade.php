@@ -11,7 +11,7 @@
                 @forelse (Auth::user()->announcements->where('is_accepted', true) as $announcement)
                 <div data-aos="fade-down" data-aos-delay="{{100*$loop->index}}" class="col-12 col-md-3 my-5">
                     <div class="card">
-                        <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,200) : 'https://picsum.photos/200'}}" class="card-img-top" alt="...">
+                        <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,200) : 'https://picsum.photos/300/200'}}" class="card-img-top" alt="...">
                         
                         <div class="card-body">
                           <h5 class="card-title">{{$announcement->title}}</h5>
@@ -42,7 +42,7 @@
                     @forelse (Auth::user()->announcements->where('is_accepted',!1) as $announcement)
                     <div data-aos="fade-down" data-aos-delay="{{100*$loop->index}}" class="col-12 col-md-3 my-5">
                         <div class="card">
-                            <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,200) : 'https://picsum.photos/200'}}" class="card-img-top" alt="...">
+                            <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,200) : 'https://picsum.photos/300/200'}}" class="card-img-top" alt="...">
                             
                             <div class="card-body">
                               <h5 class="card-title">{{$announcement->title}}</h5>

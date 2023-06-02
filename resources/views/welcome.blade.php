@@ -23,10 +23,10 @@
   {{-- Sezione icone con categorie --}}
 
   <div class="container my-5 categories">
-    <div class="row  justify-content-evenly h-100">
+    <div class="row justify-content-evenly h-100">
         @foreach($categories as $category)
 
-        <div class="col-md-2 col-5 d-flex flex-column justify-content-center align-items-center  mx-1 mb-5">
+        <div class="col-md-2 col-5 d-flex flex-column justify-content-center align-items-center category mx-1 p-5 mb-5">
             
             <a class="w-100 h-100 text-center" href="{{route('categoryShow',compact('category'))}}">
                 <div id="category{{$category->id}}" class="category{{$category->id}}"class="p-5"><i id="i{{$category->id}}" class=" text-gradient  "></i></div></a>
@@ -49,7 +49,7 @@
                 @forelse ($announcements as $announcement)
                 <a href="{{route('announcement.show',compact('announcement'))}}">
                 <div class="swiper-slide lui ">
-                    <img  src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrlwater('logo') : 'https://picsum.photos/200'}}" alt="" class=" lei">
+                    <img  src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrlwater('logo') : 'https://picsum.photos/300/200'}}" alt="" class=" lei">
                     <div class="d-flex flex-column text-center">
                         <h5 class="text-white display-4">{{$announcement->title}}</h5>
                           <p class="text-white">{{$announcement->price}} €</p> </a>
@@ -59,7 +59,7 @@
             </div>
                     
                 @endforelse
-                <div class="swiper-pagination"></div>
+                
               </div>
         </div>
 

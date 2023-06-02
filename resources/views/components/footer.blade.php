@@ -53,7 +53,7 @@
     <!-- Grid container -->
   
     <!-- Copyright -->
-    <div class="text-center p-3">
+    <div class="text-center text-white p-3">
       © 2023 Copyright:
       <a class="text-accentC" href="{{route('homepage')}}">LAMPO.it</a>
     </div>
