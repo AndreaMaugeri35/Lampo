@@ -24,7 +24,7 @@
     <div class="container-fluid  min-vh-100 about ">
         <div class="row">
             <h1 
-             class="text-accentC display-1 py-5 ps-5 mb-5">AMP-Devs <span><img src="/media/Xlogo.png" alt="" class="logo2 pb-2"></span> Lampo.it</h1>
+             class="text-gradient display-1 py-5 ps-5 mb-5">AMP-Devs <span><img src="/media/Xlogo.png" alt="" class="logo2 pb-2"></span> Lampo.it</h1>
             
             <div data-aos="fade-right"
             data-aos-duration="1500"

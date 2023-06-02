@@ -6,7 +6,7 @@
          </div>
     @endif
 
-    <div class="container-fluid mt-2 seitu pb-5">
+    <div class="container-fluid mt-2 mb-5 seitu pb-5">
         <div class="row align-items-center justify-content-center min-vh-100">
             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center h-100">
                 <div data-aos="fade-right" class="d-flex align-items-center justify-content-center flex-column text-white">
@@ -22,61 +22,50 @@
 
   {{-- Sezione icone con categorie --}}
 
-  <div class="container">
-    <div class="row min-vh-100">
-        <div class="col-12 col-md-6">
+  <div class="container my-5 categories">
+    <div class="row  justify-content-evenly h-100">
+        @foreach($categories as $category)
 
-        </div>
-
-        <div class="col-12 col-md-6">
+        <div class="col-md-2 col-5 d-flex flex-column justify-content-center align-items-center  mx-1 mb-5">
+            
+            <a class="w-100 h-100 text-center" href="{{route('categoryShow',compact('category'))}}">
+                <div id="category{{$category->id}}" class="category{{$category->id}}"class="p-5"><i id="i{{$category->id}}" class=" text-gradient  "></i></div></a>
+            <h2 class="pb-2 glow2  ">{{__('ui.categories'. $category->id)}}</h2>
             
         </div>
+        @endforeach
     </div>
   </div>
+</div>
 
-  {{-- Fine sezione icone --}}
-
-  {{-- Inizio carosello --}}
-
-  <div class="container my-5">
+{{-- inizio carosello --}}
+<div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-6">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    @forelse($announcements as $announcement)
-                        <div class="swiper-slide position-relative flex-column d-flex align-items-center">
-                            <img class="w-100 mySwiper1" src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,200) : 'https://picsum.photos/200'}}" alt="">
-                            <div class="w-100 position-absolute d-flex flex-column justify-content-end h-100 align-items-center">
-                                <a href="{{route('announcement.show',compact('announcement'))}}" class="h-100 w-100"></a>
-                            </div>
-                            <div class="d-flex flex-column text-center">
-                                  <h5 class="text-white display-4">{{$announcement->title}}</h5>
-                                    <p class="text-white">{{$announcement->price}} €</p> 
-                            </div>
-                        </div>
-                    @empty
-                        <div class="col-12 d-flex flex-column my-5 align-items-center">
-                            <h2 class="text-center text-white display-3 fw-bold">{{__('ui.noAnnouncementWelcome')}}</h2>
-                            <a href="{{route('announcement.create')}}" class="btn btnCategory text-white my-5">{{__('ui.publishWelcome')}}</a>
-                        </div>
-                    @endforelse
+        <div class="col-12 minh "> 
+
+
+            <div class="swiper mySwiper  h-100">
+                <div class="swiper-wrapper h-100 ">
+                @forelse ($announcements as $announcement)
+                <a href="{{route('announcement.show',compact('announcement'))}}">
+                <div class="swiper-slide lui ">
+                    <img  src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrlwater('logo') : 'https://picsum.photos/200'}}" alt="" class=" lei">
+                    <div class="d-flex flex-column text-center">
+                        <h5 class="text-white display-4">{{$announcement->title}}</h5>
+                          <p class="text-white">{{$announcement->price}} €</p> </a>
+                  </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                @empty
             </div>
-        </div>
-
-        <div class="col-12 col-md-6">
-
+                    
+                @endforelse
+                <div class="swiper-pagination"></div>
+              </div>
         </div>
 
     </div>
 
-    {{-- fine carosello --}}
 </div>
-
-
-
-            
+   
 
 </x-layout>

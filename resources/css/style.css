@@ -228,12 +228,32 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
 
 .mySwiper1{
     border-radius: 30px;
-    /* width: 70vw;
-    height: auto; */
-    
- 
 
 }
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    /* width: 300px;
+    height: 300px; */
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+  .minh{
+    height: 75vh;
+  }
+
+
 
 .glass{
     border-radius: 20px;
@@ -334,3 +354,22 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
     background: linear-gradient(#a238ff,#2b3873);
     /* border-radius: 10px; */
 }
+
+.categories{
+    overflow-x: hidden;
+    min-height: 50vh;
+}
+
+
+
+.text-gradient {
+    background: linear-gradient(to left bottom, #a238ff, #7743e0, #5344be, #414ceb, #3552d7);
+    background-clip: var(--accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
