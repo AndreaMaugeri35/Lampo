@@ -12,9 +12,9 @@
 }
 
 .logo{
-    width: 100px;
+    width: 80px;
    
-   animation: glow 1s alternate infinite;
+  
 }
 
 .logo2{
@@ -29,9 +29,7 @@ body{
     
 }
 .seitu{
-    overflow-x: hidden;
-    
-    
+    overflow-x: hidden;      
 }
 
 
@@ -430,3 +428,40 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
         font-size: 18px;
        }
     
+
+
+
+.lampo{
+    position: fixed;
+}
+
+          .pioggia{
+            position: absolute;
+            height: 100px;
+            background: linear-gradient(transparent, #a238ff, #3552d7);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            animation: animate 5s linear infinite;
+            z-index: -10;
+            
+       }
+        .pioggia:nth-child(3n+1) {
+            background: linear-gradient(transparent,  #3552d7);
+       }
+        .pioggia:nth-child(3n+2) {
+             background: linear-gradient(transparent,  #7743e0,);
+        }
+         .pioggia:nth-child(3n+3) {
+            background: linear-gradient(transparent, #a238ff);
+        }
+
+        @keyframes animate{
+            0%
+            {
+                transform: translateY(-200px);
+            }
+            100%
+            {
+                transform: translateY(calc(100vh + 200px));
+            }
+        } 

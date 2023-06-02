@@ -26,7 +26,7 @@
 
 <body>
     <x-navbar />
-
+    <div class="lampo "></div>
     <x-header header="{{$header}}"/>
 
     <div class="min-vh-100">

@@ -6,13 +6,13 @@
          </div>
     @endif
 
-    <div class="container-fluid mt-2 mb-5 seitu pb-5">
+    <div class="container-fluid mt-2 pb-5 seitu pb-5">
         <div class="row align-items-center justify-content-center min-vh-100">
             <div class="col-12 col-md-6 d-flex align-items-center justify-content-center h-100">
                 <div data-aos="fade-right" class="d-flex align-items-center justify-content-center flex-column text-white">
                     <i class="fa-solid text-accentC fa-10x my-5"></i>
                     <h1 class="display-1 mt-5 glow1">LAMPO<span class="text-accentC">.it</span></h1>
-                    <h2 class="mb-5">{{__('ui.subtitle')}} <span> <img src="/media/logo.png" class="logo2 pb-2" alt=""></span></h2>
+                    <h2 class="pb-5">{{__('ui.subtitle')}} <span> <img src="/media/logo.png" class="logo2 pb-2" alt=""></span></h2>
                     <a href="{{route('announcement.create')}}" class="btn btnCategory text-white my-5">{{__('ui.createWelcome')}}</a>
                 </div>
             </div>
@@ -24,13 +24,14 @@
 
   <div class="container my-5 categories">
     <div class="row justify-content-evenly h-100">
+        <h2 class="text-center text-white display-3 pb-3">Sfoglia le nostre categorie</h2>
         @foreach($categories as $category)
 
-        <div class="col-md-2 col-5 d-flex flex-column justify-content-center align-items-center category mx-1 p-5 mb-5">
+        <div class="col-md-3 col-4 d-flex flex-column justify-content-center align-items-center category mx-1 px-0  py-4">
             
-            <a class="w-100 h-100 text-center" href="{{route('categoryShow',compact('category'))}}">
+            <a class="w-100 h-100 text-center " href="{{route('categoryShow',compact('category'))}}">
                 <div id="category{{$category->id}}" class="category{{$category->id}}"class="p-5"><i id="i{{$category->id}}" class=" text-gradient  "></i></div></a>
-            <h2 class="pb-2 glow2  ">{{__('ui.categories'. $category->id)}}</h2>
+            <h5 class="py-5 glow2  ">{{__('ui.categories'. $category->id)}}</h5>
             
         </div>
         @endforeach
@@ -43,7 +44,9 @@
     <div class="row justify-content-center">
         <div class="col-12 minh "> 
 
-
+            @if($announcements)
+                <h2 class="text-center text-white display-3">Gli ultimi annunci</h2>
+            @endif
             <div class="swiper mySwiper  h-100">
                 <div class="swiper-wrapper h-100 ">
                 @forelse ($announcements as $announcement)

@@ -70,6 +70,31 @@ window.addEventListener('scroll', ()=>{
     });
 
 
+
+function rain(){
+  let amount=200;
+  let body= document.querySelector('.lampo');
+  let i=0;
+  while(i<amount){
+    let drop= document.createElement('i');
+    drop.classList.add('pioggia')
+    // let pioggia =document.querySelector('i');
+    let size= Math.random() * 1;
+    let posX= Math.floor(Math.random() * window.innerWidth);
+    let delay= Math.random() * -20;
+    let duration= Math.random() * 5;
+
+    drop.style.width=0.2 + size + 'px';
+    drop.style.left= posX + 'px';
+    drop.style.animationDelay= delay + 's';
+    drop.style.animationDuration=1 + duration+'s';
+    body.appendChild(drop);
+    i++;
+  }
+}
+rain();
+
+
     let category1 = document.querySelector('#category1');
     let category2 = document.querySelector('#category2');
     let category3 = document.querySelector('#category3');
@@ -121,4 +146,3 @@ window.addEventListener('scroll', ()=>{
     if(category10.classList.contains('category10')){
       i10.classList.add('fa-solid' ,'fa-keyboard', 'fa-7x');
     }
-
