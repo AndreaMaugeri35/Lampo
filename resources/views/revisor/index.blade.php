@@ -30,6 +30,7 @@
                           </div>
                           @endforeach
                         </div>
+                        <div class="d-inline"></div>
                         @foreach($announcement_to_check->images as $image)
                             <div class="w-50 p-5 pb-0">
                                 <h5 class="text-white">Revisione immagini</h5>
@@ -84,21 +85,21 @@
             
         </div>
 
-            <div class="col-12 col-md-6 my-3 p-5 d-flex">
-                <form action="{{route('revisor.accept_announcement', ['announcement' => $announcement_to_check])}}" method="POST">
-                    @csrf
-                    @method('PATCH')
-                    <button type="submit" class="btn btn-success">{{__('ui.accept')}}</button>
-                </form>
+        
+    </div>
+    <div class="col-12 col-md-6 my-3 p-5 d-flex">
+        <form action="{{route('revisor.accept_announcement', ['announcement' => $announcement_to_check])}}" method="POST">
+            @csrf
+            @method('PATCH')
+            <button type="submit" class="btn btn-success">{{__('ui.accept')}}</button>
+        </form>
 
-                <form action="{{route('revisor.reject_announcement', ['announcement' => $announcement_to_check])}}" method="POST">
-                    @csrf
-                    @method('PATCH')
-                    <button type="submit" class="btn btn-danger mx-5">{{__('ui.reject')}}</button>
-                </form>
-            </div>
-
-        </div>
+        <form action="{{route('revisor.reject_announcement', ['announcement' => $announcement_to_check])}}" method="POST">
+            @csrf
+            @method('PATCH')
+            <button type="submit" class="btn btn-danger mx-5">{{__('ui.reject')}}</button>
+        </form>
+    </div>
     </div>
     @endif
 

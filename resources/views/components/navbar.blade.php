@@ -33,13 +33,6 @@
                 @endif  
               @endforeach
             </ul>
-            @auth
-            @if(Auth::user()->is_revisor)
-            <li class="nav-item">
-              <a class="nav-link mx-2 @if(Route::is('revisor.index')) activeNav @else btn-link @endif" href="{{route('revisor.index')}}">Revisor ({{App\Models\Announcement::toBeRevisionedCount() ?? ''}})</a>
-            </li>
-            @endif
-            @endauth
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle btn-link mx-2 @if(Route::is('login')) activeNav @elseif(Route::is('register')) active  @endif" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-user-astronaut fa-lg"></i>
@@ -47,6 +40,11 @@
               </a>
               @auth
             <ul class="dropdown-menu background-accentC">
+              @if(Auth::user()->is_revisor)
+                <li>
+                  <a class="dropdown-item text-white" href="{{route('revisor.index')}}">Revisor ({{App\Models\Announcement::toBeRevisionedCount() ?? ''}})</a>
+                </li>
+              @endif
               <li><a class="dropdown-item text-white" href="{{route('user.profile')}}">{{__('ui.profileName')}} {{Auth::user()->name}}</a></li>
               <li><hr class="dropdown-divider"></li>
               <li>
