@@ -1,8 +1,8 @@
 <div>
 
-    <div class="container my-5">
+    <div class="container py-5">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8 my-2">
+            <div class="col-12 col-md-8 py-2">
 
                 @auth
                     

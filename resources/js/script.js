@@ -83,7 +83,7 @@ function rain(){
     let drop= document.createElement('i');
     drop.classList.add('pioggia')
     // let pioggia =document.querySelector('i');
-    let size= Math.random() * 1;
+    let size= Math.random() * 3;
     let posX= Math.floor(Math.random() * window.innerWidth);
     let delay= Math.random() * -20;
     let duration= Math.random() * 5;

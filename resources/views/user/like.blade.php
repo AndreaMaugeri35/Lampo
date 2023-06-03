@@ -1,6 +1,6 @@
 <x-layout title="Il tuo profilo: {{Auth::user()->name}}" header="{{__('ui.userProfile')}} {{Auth::user()->name}}">
 
-    <div class="container my-2 ">
+    <div class="container py-2 ">
         <div class="row justify-content-center carda">
           
             

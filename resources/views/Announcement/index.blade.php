@@ -1,6 +1,6 @@
 <x-layout title="Tutti gli annunci" header="{{__('ui.allAnnouncements')}}">
 
-    <div class="container my-2 ">
+    <div class="container py-2 ">
         <div class="row justify-content-center carda">
           
             

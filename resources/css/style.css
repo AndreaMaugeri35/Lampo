@@ -31,7 +31,7 @@ body{
 
 .totalglass{
     -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(7px);
 }
 
 
@@ -288,6 +288,8 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
 
   .minh{
     height: 75vh;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(10px);
   }
 
 
@@ -479,7 +481,7 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
 
           .pioggia{
             position: absolute;
-            height: 50px;
+            height: 100px;
             background: linear-gradient(transparent, #a238ff, #3552d7);
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;

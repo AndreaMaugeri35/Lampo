@@ -5,7 +5,7 @@
         </div>
      @endif
     
-    <div class="container my-5">
+    <div class="container py-5">
         <div class="row justify-content-center">
                 <h2 class="text-white text-center">{{__('ui.userAnnounce')}}</h2>
                 @forelse (Auth::user()->announcements->where('is_accepted', true) as $announcement)
