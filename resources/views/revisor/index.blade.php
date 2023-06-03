@@ -19,7 +19,7 @@
         <div class="row justify-content-center">
     {{-- @forelse ($announcement_to_check as $announcement) --}}
         <div class="col-12 col-md-6 my-3">
-            <div class="card">
+            <div class="card glass">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                         @if(!$announcement_to_check->images->isEmpty())

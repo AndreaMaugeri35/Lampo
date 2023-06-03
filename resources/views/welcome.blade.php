@@ -51,7 +51,7 @@
                 <div class="swiper-wrapper h-100 ">
                 @forelse ($announcements as $announcement)
                 <a href="{{route('announcement.show',compact('announcement'))}}">
-                <div class="swiper-slide lui ">
+                <div class="swiper-slide lui glass2">
                     <img  src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrlwater('logo') : 'https://picsum.photos/300/200'}}" alt="" class=" lei">
                     <div class="d-flex flex-column text-center">
                         <h5 class="text-white display-4">{{$announcement->title}}</h5>

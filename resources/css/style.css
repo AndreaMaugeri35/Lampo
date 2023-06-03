@@ -127,7 +127,7 @@ body{
         border-radius: 10px;
         transition: all 0.3s;
         border:1px solid rgba(255, 255, 255, 0.18);
-        background-color: #fbf9f100;
+        /* background-color: rgba(93, 12, 125, 0.698); */
         
     }
 
@@ -148,6 +148,19 @@ body{
     border:1px solid rgba(255, 255, 255, 0.18);
 
 }
+
+/* .card:hover ~ .card {
+    filter: blur(5px);
+  }
+  .card:hover ~ .card > .card-body {
+    -webkit-filter:   blur(20px);
+    
+} */
+
+.carda:hover .card:not(:hover) {
+    filter: blur(5px);
+  }
+
 
 /* Sezione Navbar */
 
@@ -270,6 +283,12 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
    
 }
 
+.glass2{
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
 @media screen and (max-width: 991px) {
 
     .home1{
@@ -298,10 +317,10 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
 
   @-webkit-keyframes glow1 {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #A238FF, 0 0 40px #A238FF, 0 0 50px #A238FF, 0 0 60px #A238FF, 0 0 70px #A238FF;
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #A238FF, 0 0 40px #A238FF, 0 0 50px #291cd9, 0 0 60px #A238FF, 0 0 70px #291cd9;
     }
     to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #A238FF, 0 0 40px #A238FF, 0 0 50px #A238FF, 0 0 60px #A238FF, 0 0 70px #A238FF, 0 0 80px #A238FF;
+      text-shadow: 0 0 20px #fff, 0 0 30px #A238FF, 0 0 40px #291cd9, 0 0 50px #A238FF, 0 0 60px #291cd9, 0 0 70px #A238FF, 0 0 80px #291cd9;
     }
   }
 
@@ -437,7 +456,7 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
 
           .pioggia{
             position: absolute;
-            height: 100px;
+            height: 50px;
             background: linear-gradient(transparent, #a238ff, #3552d7);
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;

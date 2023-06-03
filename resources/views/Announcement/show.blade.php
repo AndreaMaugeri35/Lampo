@@ -2,7 +2,7 @@
     <div class="container my-2">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 mt-5">
-                <div class="card">
+                <div class="card glass">
                     {{-- <img src="https://picsum.photos/200" class="card-img-top" alt="..."> --}}
                     
                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">

@@ -13,7 +13,7 @@
                       <p class="card-text">{{$announcement->price}} €</p>
                       <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btn-primary d-block">{{__('ui.indexDetails')}}</a>
                       <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="my-1 btn btn-primary btnCategory text-white d-block">{{__('ui.indexCategory')}} {{__('ui.categories'. $announcement->category->id)}}</a>
-                      <p class="card-footer">{{__('ui.indexDate')}} {{$announcement->created_at->format('d/m/Y')}} - {{__('ui.From')}} {{$announcement->user->name ?? ''}}</a> </p>
+                      <p class="card-footer">{{__('ui.indexDate')}} {{$announcement->created_at->format('d/m/Y')}} - {{__('ui.from')}} {{$announcement->user->name ?? ''}}</a> </p>
                     </div>
                   </div>
                 </div>
