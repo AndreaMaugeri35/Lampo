@@ -6,7 +6,7 @@
                     {{-- <img src="https://picsum.photos/200" class="card-img-top" alt="..."> --}}
                     
                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                      @if($announcement->images)
+                      @if(!$announcement->images->isEmpty())
                       <div class="carousel-inner">
                         @foreach($announcement->images as $image)
                         <div class="carousel-item lui  @if($loop->first) active @endif">
@@ -47,7 +47,7 @@
                       <p class="card-text">{{$announcement->price}} €</p>
                       <p class="card-text">{{__('ui.indexDate')}}{{$announcement->created_at->format('d/m/Y')}} -{{__('ui.from')}} <a class="btn btnprimary "  href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement->user->name ?? ''}}</a> </p>
                       <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="my-1 btn btn-primary btnCategory text-white">{{__('ui.indexCategory')}} {{__('ui.categories'. $announcement->category->id)}}</a>
-                      <a href="{{route('homepage')}}" class="btn btn-primary">{{__('ui.backHome')}}</a>
+                      <a href="{{url()->previous()}}" class="btn btn-primary">{{__('ui.backHome')}}</a>
                       @auth
                         <form method="POST" action="{{route('like',compact('announcement'))}}">
                             @method('put')

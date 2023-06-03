@@ -18,7 +18,7 @@ return[
     'indexDate' => 'Posted: ',
     'indexPublish' => 'Post new announcement',
     'indexCategory' => 'Category: ',
-    'backHome' => 'Back home',
+    'backHome' => 'Go back',
     'from' => 'From',
     'createAnnouncement' => 'Insert your announcement',
     'createTitle' => 'Announcement title',

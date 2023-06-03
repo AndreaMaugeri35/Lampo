@@ -18,7 +18,7 @@ return[
     'indexDate' => 'Publicado: ',
     'indexPublish' => 'Publica un nuevo anuncio',
     'indexCategory' => 'Categoria: ',
-    'backHome' => 'Regresa a la Home',
+    'backHome' => 'Regresa',
     'from' => 'de',
     'createAnnouncement' => 'entre tu anuncio',
     'createTitle' => 'Titulo  de tu anuncio',

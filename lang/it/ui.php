@@ -18,7 +18,7 @@ return[
     'indexDate' => 'Pubblicato il: ',
     'indexPublish' => 'Pubblica un nuovo annuncio',
     'indexCategory' => 'Categoria: ',
-    'backHome' => 'Torna alla home',
+    'backHome' => 'Torna indietro',
     'from' => 'Da',
     'createAnnouncement' => 'Inserisci il tuo annuncio',
     'createTitle' => 'Titolo annuncio',
