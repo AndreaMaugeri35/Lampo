@@ -1,6 +1,6 @@
 <x-layout title="Profilo di {{$announcement->user->name}}" header="{{__('ui.profile')}} {{$announcement->user->name}}">
     <div class="container my-2">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center carda">
           
             
             @forelse ($announcement->user->announcements->where('is_accepted', true) as $announcement)

@@ -76,7 +76,7 @@ window.addEventListener('scroll', ()=>{
 
 
 function rain(){
-  let amount=200;
+  let amount=100;
   let body= document.querySelector('.lampo');
   let i=0;
   while(i<amount){

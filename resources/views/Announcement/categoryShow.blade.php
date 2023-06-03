@@ -1,7 +1,7 @@
 <x-layout title="{{$category->name}}" header="{{__('ui.categoryShow')}}  {{$category->name}}">
 
     <div class="container my-2">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center carda">
             
                 @forelse ($category->announcements->where('is_accepted', true)->sortByDesc('created_at') as $announcement)
                     <div data-aos="fade-down" data-aos-delay="{{100*$loop->index}}" class="col-12 col-md-3 my-5 ">

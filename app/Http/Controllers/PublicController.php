@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PublicController extends Controller
 {
@@ -36,4 +37,17 @@ class PublicController extends Controller
         return view('about');
         
     }
+
+    public function like(Announcement $announcement){
+        if(!$announcement->userlike->contains('id', Auth::user()->id)){
+            $announcement->like = $announcement->like+=1;
+            $announcement->save(['timestamps' => false]);   
+            $announcement->userlike()->attach(Auth::user('id'));
+        }else{
+            $announcement->like = $announcement->like-=1;
+            $announcement->userlike()->detach(Auth::user('id'));
+            $announcement->save(['timestamps' => false]);
+        }
+         return redirect(route('announcement.show',compact('announcement')));
+     }
 }

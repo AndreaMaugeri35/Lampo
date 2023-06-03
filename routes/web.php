@@ -49,3 +49,9 @@ Route::get('/ricerca/annuncio', [PublicController::class, 'searchAnnouncements']
 Route::post('/lingua{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
 
 Route::get('/aboutus',[PublicController::class,'about'])->name('about');
+
+
+
+Route::put('/announcements/like/{announcement}', [PublicController::class, 'like'])->name('like');
+Route::get('/profile/like',[UserController::class,'like'])->middleware('auth')->name('user.like');
+

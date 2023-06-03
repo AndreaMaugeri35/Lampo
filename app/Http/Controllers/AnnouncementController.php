@@ -66,7 +66,7 @@ class AnnouncementController extends Controller
         
             // $announcement->games()->detach($announcement->games);
             
-    
+            $announcement->userlike()->detach();
             $announcement->delete();
             
             return redirect()->back()->with('message', 'Annuncio eliminato');

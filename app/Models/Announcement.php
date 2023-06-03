@@ -20,7 +20,7 @@ class Announcement extends Model
        'title',
        'body',
        'price',
-       
+       'like'
 
     ];
 
@@ -56,5 +56,10 @@ class Announcement extends Model
 
     public function images(){
         return $this->hasMany(Image::class);
+    }
+
+    public function userlike()
+    {
+       return $this->belongsToMany(User::class); 
     }
 }

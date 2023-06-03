@@ -46,6 +46,8 @@
                 </li>
               @endif
               <li><a class="dropdown-item text-white" href="{{route('user.profile')}}">{{__('ui.profileName')}} {{Auth::user()->name}}</a></li>
+              <li><a class="dropdown-item text-white" href="{{route('user.like')}}">Annunci seguiti</a></li>
+
               <li><hr class="dropdown-divider"></li>
               <li>
                 <a class="dropdown-item text-white" href="#" onclick="event.preventDefault();document.querySelector('#form-logout').submit();">Logout</a>

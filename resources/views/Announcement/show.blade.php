@@ -48,6 +48,21 @@
                       <p class="card-text">{{__('ui.indexDate')}}{{$announcement->created_at->format('d/m/Y')}} -{{__('ui.from')}} <a class="btn btnprimaryC "  href="{{route('announcement.profile',compact('announcement'))}}">{{$announcement->user->name ?? ''}}</a> </p>
                       <a href="{{route('categoryShow',['category'=>$announcement->category])}}" class="my-1 btn btn-primary btnCategory text-white">{{__('ui.indexCategory')}} {{__('ui.categories'. $announcement->category->id)}}</a>
                       <a href="{{route('homepage')}}" class="btn btn-primary">{{__('ui.backHome')}}</a>
+                      @auth
+                        <form method="POST" action="{{route('like',compact('announcement'))}}">
+                            @method('put')
+                            @csrf
+                            
+                             {{-- ($movie->user->contains('id', Auth::user()->id)) --}}
+                            {{-- <div class="btn btn-primary my-3">{{$movie->like}} Mi piace</div> --}}
+                            <button  type="submit" class="btn @if(!$announcement->userlike->contains('id', Auth::user()->id)) btn-primary @else btn-danger @endif my-3">@if(!$announcement->userlike->contains('id', Auth::user()->id)) Mi piace @else Non mi piace più @endif</button>
+
+
+                            {{-- @else --}}
+                            {{-- <button  type="submit" class="btn btn-primary my-3">{{$movie->like}} Mi piace</button> --}}
+                            {{-- @endif --}}
+                        </form>
+                        @endauth
                     </div>
                   </div>
             </div>

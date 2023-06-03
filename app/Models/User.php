@@ -47,4 +47,8 @@ class User extends Authenticatable
     public function announcements(){
         return $this->hasMany(Announcement::class);
     }
+    public function announcementslike()
+    {
+       return $this->belongsToMany(Announcement::class); 
+    }
 }

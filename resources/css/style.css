@@ -158,7 +158,8 @@ body{
 } */
 
 .carda:hover .card:not(:hover) {
-    filter: blur(5px);
+    filter: blur(2px);
+    scale:0.9;
   }
 
 
@@ -383,6 +384,8 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
 
 .categories{
     overflow-x: hidden;
+    overflow-y: hidden;
+
     min-height: 50vh;
 }
 
