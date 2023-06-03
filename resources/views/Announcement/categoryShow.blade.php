@@ -4,7 +4,7 @@
         <div class="row justify-content-center carda">
             
                 @forelse ($category->announcements->where('is_accepted', true)->sortByDesc('created_at') as $announcement)
-                    <div data-aos="fade-down" data-aos-delay="{{100*$loop->index}}" class="col-12 col-md-3 my-5 ">
+                    <div data-aos="fade-down" data-aos-delay="{{100*$loop->index}}" class="col-10 col-md-3 my-5 ">
                         <div class="card glass">
                             <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,200) : 'https://picsum.photos/300/200'}}" class="card-img-top" alt="...">
                             

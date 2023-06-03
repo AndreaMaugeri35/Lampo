@@ -49,7 +49,7 @@
             @if($announcements)
                 <h2 class="text-center text-white display-3">{{__('ui.last')}}</h2>
             @endif
-            <div class="swiper mySwiper  h-100">
+            <div class="swiper mySwiper pt-2 h-100">
                 <div class="swiper-wrapper h-100 ">
                     @forelse ($announcements as $announcement)
                     <a href="{{route('announcement.show',compact('announcement'))}}">

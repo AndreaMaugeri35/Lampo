@@ -292,6 +292,15 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
     backdrop-filter: blur(10px);
   }
 
+  .footeri{
+    transition: all 0.3s;
+    transform: scale(1.3);
+
+  }
+  .footeri:hover{
+    transform: scale(1.8);
+  }
+
 
 
 .glass{
@@ -317,6 +326,7 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
     .seitu{
         height: 55vh;
     }
+    .logo{width: 40px;}
 }
 
 .glow1 {
