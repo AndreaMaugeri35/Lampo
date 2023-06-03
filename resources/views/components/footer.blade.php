@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class=" text-center text-white bg-transparent">
+<footer class=" text-center text-white bg-transparent totalglass mt-5">
   <!-- Grid container -->
   <div class="container p-4">
 

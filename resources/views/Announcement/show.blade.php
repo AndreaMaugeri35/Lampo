@@ -55,7 +55,7 @@
                             
                              {{-- ($movie->user->contains('id', Auth::user()->id)) --}}
                             {{-- <div class="btn btn-primary my-3">{{$movie->like}} Mi piace</div> --}}
-                            <button  type="submit" class="btn @if(!$announcement->userlike->contains('id', Auth::user()->id)) btn-primary @else btn-danger @endif my-3">@if(!$announcement->userlike->contains('id', Auth::user()->id)) Mi piace @else Non mi piace più @endif</button>
+                            <button  type="submit" class="btn @if(!$announcement->userlike->contains('id', Auth::user()->id)) AccentC @else btn-danger @endif my-3">@if(!$announcement->userlike->contains('id', Auth::user()->id)) Mi piace @else Non mi piace più @endif</button>
 
 
                             {{-- @else --}}

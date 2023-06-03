@@ -26,10 +26,10 @@
 
 <body>
     <x-navbar />
-    <div class="lampo "></div>
+    <div class="lampo totalglass"></div>
     <x-header header="{{$header}}"/>
 
-    <div class="min-vh-100">
+    <div class="min-vh-100 totalglass">
         {{$slot}}
     </div>
 

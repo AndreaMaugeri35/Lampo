@@ -26,10 +26,24 @@ body{
     background-size: cover;
     /* background-attachment: fixed; */
     font-family: 'Inter';
-    
+
 }
+
+.totalglass{
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(10px);
+}
+
+
 .seitu{
-    overflow-x: hidden;      
+    overflow-x: hidden;  
+    overflow-y: hidden;
+    background-image: url('/public/media/copertina.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+   
 }
 
 
@@ -196,6 +210,8 @@ body{
 
     
 
+    
+
 
 }
 
@@ -294,6 +310,10 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
 
     .home1{
         display: none;
+    }
+
+    .seitu{
+        height: 50vh;
     }
 }
 

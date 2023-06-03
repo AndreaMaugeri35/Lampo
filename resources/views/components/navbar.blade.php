@@ -1,4 +1,4 @@
-<nav class="navbar nav navbar-expand-lg  fixed-top fs-7" id="navbar">
+<nav class="navbar nav navbar-expand-lg  fixed-top fs-7 totalglass" id="navbar">
     <div class="container-fluid">
       <a class="navbar-brand mx-0" href="{{route('homepage')}}"><img src="/media/logo.png" class="logo" alt="">
         <a class="nav-link mx-0 home1 glow2 @if(Route::is('homepage')) d-none @else btn-link @endif" aria-current="page"  href="{{route('homepage')}}">Home</a>
