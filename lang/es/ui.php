@@ -62,7 +62,16 @@ return[
     'categories8' => 'Fotografìa',
     'categories9' => 'Musica',
     'categories10' => 'Accesorios',
-    'about'=> 'Quienes somos'
+    'about'=> 'Quienes somos',
+    'categoryHome'=>'Nostras categorias',
+    'last'=>'Ultimos anuncios',
+    'follow'=>'Anuncios seguidos',
+    'nofollow'=>'No se siguen anuncios',
+    'about1'=>'Somos un equipo apasionado y entregado que cree en el poder de la creatividad y la innovación.',
+    'about2'=>'Nuestra misión es ofrecer soluciones únicas que satisfagan las necesidades de nuestros clientes, impulsadas por la calidad y la excelencia.',
+    'about3'=>'Nos esforzamos por crear un entorno de colaboración en el que las ideas cobren vida y florezca el talento.',
+    'like'=>'Seguido',
+    'nolike'=>'No seguido',
 
     
 

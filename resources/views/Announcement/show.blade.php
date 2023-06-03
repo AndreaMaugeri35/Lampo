@@ -17,13 +17,13 @@
                       @else
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
+                            <img src="https://picsum.photos/600" class="d-block w-100" alt="...">
                           </div>
                           <div class="carousel-item">
-                            <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
+                            <img src="https://picsum.photos/600" class="d-block w-100" alt="...">
                           </div>
                           <div class="carousel-item">
-                            <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
+                            <img src="https://picsum.photos/600" class="d-block w-100" alt="...">
                           </div>
                         </div>
                         @endif
@@ -55,7 +55,7 @@
                             
                              {{-- ($movie->user->contains('id', Auth::user()->id)) --}}
                             {{-- <div class="btn btn-primary my-3">{{$movie->like}} Mi piace</div> --}}
-                            <button  type="submit" class="btn @if(!$announcement->userlike->contains('id', Auth::user()->id)) AccentC @else btn-danger @endif my-3">@if(!$announcement->userlike->contains('id', Auth::user()->id)) Mi piace @else Non mi piace più @endif</button>
+                            <button  type="submit" class="btn btn-success @if(!$announcement->userlike->contains('id', Auth::user()->id)) AccentC @else btn-danger @endif my-3">@if(!$announcement->userlike->contains('id', Auth::user()->id)) {{__('ui.like')}} @else {{__('ui.nolike')}} @endif</button>
 
 
                             {{-- @else --}}

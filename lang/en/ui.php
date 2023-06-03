@@ -62,6 +62,16 @@ return[
     'categories8' => 'Photography',
     'categories9' => 'Music',
     'categories10' => 'Accesories',
-    'about' => 'About us'
+    'about' => 'About us',
+    'categoryHome'=>'Our categories',
+    'last'=>'Last announcements',
+    'follow'=>'Followed announcements',
+    'nofollow'=>'No followed announcements',
+    'about1'=>'We are a passionate and dedicated team that believes in the power of creativity and innovation.',
+    'about2'=>'Our mission is to offer unique solutions that meet our \' needs, driven by quality and excellence.',
+    'about3'=>'We strive to create a collaborative environment where ideas come to life and talent flourishes.',
+    'like'=>'Follow',
+    'nolike'=>'Not follow',
+
     
 ];

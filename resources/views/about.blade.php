@@ -32,7 +32,7 @@
                 <div class="col-12 col-md-6 d-flex align-items-center p-5 mb-5">
                     <p class="text-white pt-5 px-5 mt-5 display-6">
     
-                        Siamo un team appassionato e dedicato che crede nel potere della creatività e dell'innovazione.
+                        {{__('ui.about1')}}
                        
                     </p></div>
                     <div class="col-12 col-md-6 d-flex justify-content-center p-5 mb-5">
@@ -51,7 +51,8 @@
                 <div class="col-12 col-md-6 d-flex align-items p-5  mb-5">
                     <p class="text-white pt-5 px-5 mt-5 display-6 ">
     
-                        La nostra missione è offrire soluzioni uniche che soddisfino le esigenze dei nostri clienti, guidati dalla qualità e dall'eccellenza.
+                        {{__('ui.about2')}}
+
                        
                     </p></div>
                 </div>
@@ -63,7 +64,8 @@
                     <div class="col-12 col-md-6 d-flex align-items p-5 mb-5">
                         <p class="text-white pt-5  px-5 mt-5 display-6 ">
         
-                            Ci impegniamo a creare un ambiente collaborativo, in cui le idee prendono vita e il talento fiorisce.
+                            {{__('ui.about3')}}
+
                            
                         </p></div>
                         <div class="col-12 col-md-6 d-flex justify-content-center p-5 mb-5">

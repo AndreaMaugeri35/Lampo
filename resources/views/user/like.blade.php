@@ -1,4 +1,4 @@
-<x-layout title="Il tuo profilo: {{Auth::user()->name}}" header="{{__('ui.userProfile')}} {{Auth::user()->name}}">
+<x-layout title="Il tuo profilo: {{Auth::user()->name}}" header="{{__('ui.follow')}}">
 
     <div class="container py-2 ">
         <div class="row justify-content-center carda">
@@ -20,7 +20,7 @@
                 </div>
             @empty
                 <div class="col-12 my-5 d-flex flex-column align-items-center ">
-                    <h2 class="text-center text-white display-3 fw-bold">{{__('ui.noAnnouncementWelcome')}}</h2>
+                    <h2 class="text-center text-white display-3 fw-bold">{{__('ui.nofollow')}}</h2>
                 </div>
             @endforelse
         </div>
