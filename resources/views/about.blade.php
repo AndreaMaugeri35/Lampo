@@ -26,9 +26,7 @@
             <h1 
              class="text-gradient display-1 py-5 ps-5 mb-5">AMP-Devs <span><img src="/media/Xlogo.png" alt="" class="logo2 pb-2"></span> Lampo.it</h1>
             
-            <div data-aos="fade-right"
-            data-aos-duration="1500"
-             class="d-inline d-flex align-items-center">
+            
                 <div class="col-12 col-md-6 d-flex align-items-center p-5 mb-5">
                     <p class="text-white pt-5 px-5 mt-5 display-6">
     
@@ -36,17 +34,14 @@
                        
                     </p></div>
                     <div class="col-12 col-md-6 d-flex justify-content-center p-5 mb-5">
-                        <img src="/media/teams.png" alt="">
+                        <img class="w-75" src="/media/teams.png" alt="">
                     </div>
 
-            </div>
+            
 
-            <div data-aos="fade-left"
-            data-aos-duration="1500"
-
-             class="d-inline d-flex align-items-center">
-                <div class="col-12 col-md-6 d-flex justify-content-center p-5  mb-5">
-                    <img src="/media/work.png" alt="">
+            
+                <div class="col-12 col-md-6 d-flex justify-content-center p-5 sparisci mb-5">
+                    <img class="w-75" src="/media/work.png" alt="">
                 </div>
                 <div class="col-12 col-md-6 d-flex align-items p-5  mb-5">
                     <p class="text-white pt-5 px-5 mt-5 display-6 ">
@@ -55,12 +50,12 @@
 
                        
                     </p></div>
-                </div>
+                    <div class="col-12 col-md-6 d-flex justify-content-center p-5 appari d-none mb-5">
+                        <img class="w-100" src="/media/work.png" alt="">
+                    </div>
+                
 
-                <div data-aos="fade-right"
-                data-aos-duration="1500"
-
-                 class="d-inline d-flex align-items-center">
+                
                     <div class="col-12 col-md-6 d-flex align-items p-5 mb-5">
                         <p class="text-white pt-5  px-5 mt-5 display-6 ">
         
@@ -69,9 +64,9 @@
                            
                         </p></div>
                         <div class="col-12 col-md-6 d-flex justify-content-center p-5 mb-5">
-                            <img src="/media/workspace.png" alt="">
+                            <img class="w-75" src="/media/workspace.png" alt="">
                         </div>
-                    </div>
+                    
         
                      
         </div>
