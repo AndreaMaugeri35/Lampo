@@ -6,8 +6,10 @@
     --blacky: #222323;
     --whitey: #ECEBE5;
 
-    font-family: 'Inter';
-    
+    font-family: 'Alata', sans-serif;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-family: 'Saira', sans-serif;
+        
 
 }
 
@@ -25,7 +27,7 @@ body{
     background-image: url('/public/media/bgfinalproject.jpg');
     background-size: cover;
     /* background-attachment: fixed; */
-    font-family: 'Inter';
+    font-family: 'Quattrocento Sans';
 
 }
 
@@ -43,6 +45,7 @@ body{
     background-repeat: no-repeat;
     height: 100vh;
     position: relative;
+    font-family: 'Saira', sans-serif;
    
 }
 
@@ -533,3 +536,8 @@ navbar-nav > li > .dropdown-menu {     background-color: #dd0808;  }
                 transform: translateY(calc(100vh + 200px));
             }
         } 
+
+        nav{
+            font-family: 'Alata';
+        }
+
